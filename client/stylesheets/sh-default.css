@@ -1,0 +1,585 @@
+.home-content {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    color: white;
+}
+.home-pic {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/images/jumbo-cover.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -1;
+}
+.squeeze-row {
+    margin-bottom:-15px;
+    margin-top:-15px;
+}
+.squeeze-col-left {
+    padding-right: 7px;
+}
+.squeeze-col-right {
+    padding-left: 7px;
+}
+.form-control {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.access-control-btn {
+    font-weight:bold;
+    font-size:medium;
+}
+.feature-jumbo {
+    padding:20px;
+}
+.home-jumbo-icon {
+    height:300px;
+}
+.btn-group {
+    margin-bottom: 15px
+}
+.help-btn-nav {
+    height: 90px;
+    width: 6%
+}
+.help-btn {
+    height: 90px;
+    width: 22%
+}
+.faq-a-left,
+.faq-q-left {
+    text-align: center;
+    width: 50px
+}
+.faq-group-title {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+    line-height: 1.5
+}
+.faq-content {
+    margin-top: 25px
+}
+.glyph-lg {
+    font-size: 150px
+}
+.big-button {
+    font-size: 30px
+}
+.even-jumbo {
+    background-color: #fff
+}
+.last-jumbo {
+    background-color: #000;
+    color: #fff
+}
+.last-jumbo div h3 {
+    color: #fff
+}
+.jumbotron {
+    margin: 0
+}
+.btn-homepage {
+    padding-left: 30px;
+    padding-right: 30px
+}
+.first-jumbo {
+    background-image: url(/images/jumbo-img.jpg);
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+.header-jumbo {
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(/images/jumbo-cover.jpg)
+}
+.jumbotron h1 {
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 0;
+    margin-top: 0;
+    height: auto;
+    width: auto;
+    float: none;
+    font-weight: 400
+}
+.header-content {
+    background-color: rgba(255, 255, 255, .6)
+}
+.jumbotron p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 27px;
+    line-height: 28px;
+    font-weight: 300;
+    padding-top: 0
+}
+.btn.btn-sm.btn-primary.btn-homepage {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+.header-content {
+    margin-top: 218px;
+    padding: 12px 0;
+    margin-left: 0;
+    margin-right: 0
+}
+.jumbotron p.mid-text {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+.mid-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 50px
+}
+.header-content.row-fluid {
+    margin-top: 229px;
+    background-color: rgba(0, 0, 0, .529412);
+    color: #fff;
+    height: 203px;
+    padding-top: 0;
+    padding-bottom: 0
+}
+.step-cell {
+    padding-left: 20px;
+    padding-right: 20px
+}
+.md-lg-text {
+    font-size: 27px;
+    line-height: 28px
+}
+.quote {
+    margin-top: 0;
+    padding-top: 0
+}
+.jumbotron h1.wait-text {
+    padding-bottom: 15px
+}
+.navbar-right {
+    padding-right: 20px
+}
+#headerwrap h3 {
+    margin-top: 0
+}
+.margin-top {
+    margin-top: 20px
+}
+.left-panel {
+    padding-top: 10px;
+    -webkit-box-shadow: #d3d3d3 1px 0 1px;
+    box-shadow: #d3d3d3 1px 0 1px
+}
+.content {
+    border: 1px solid #d3d3d3;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+.newBtn {
+    width: 100px
+}
+.middle-content {
+    margin-top: 50px;
+    height: 100%;
+    background-color: #fff;
+    -webkit-background-size: initial initial;
+    -o-background-size: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-image: none;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    padding-top: 0;
+    box-shadow: 5px 5px 5px #888;
+    border-radius: 10px;
+}
+.help-glyph {
+    font-size: x-small
+}
+.contributor {
+    margin-bottom: 10px
+}
+.avatar {
+    width: 230px;
+    height: 200px
+}
+.footer-min {
+    text-align: right;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #2f2f2f;
+    color: #fff;
+    height: 100%
+}
+.main {
+    width: 80%;
+    background-color: #fff
+}
+.project-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 700;
+    font-style: normal
+}
+.topic-title {
+    font-size: x-large;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 2px
+}
+.topic-content {
+    margin-top: 10px
+}
+.main-right {
+    padding: 10px
+}
+.star-gold {
+    color: gold
+}
+.glyph-btn {
+    color: #555;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: large;
+    float: right
+}
+.setting-title {
+    margin: 0;
+    font-weight: 700
+}
+.timestamp {
+    text-align: center
+}
+.status-done {
+    font-size: small;
+    background-color: green
+}
+.status-inprogress {
+    font-size: small;
+    background-color: gold
+}
+.status-waiting {
+    font-size: small
+}
+.tool-row {
+    margin-bottom: 8px
+}
+.event-done {
+    color: silver
+}
+.event-inprogress {
+    background-color: #efefef
+}
+.proj-settings,
+.timeline {
+    margin-top: 10px
+}
+.right-section {
+    margin-bottom: 20px
+}
+#feature-shaded {
+    background-color: #d7ddee
+}
+.statistics {
+    font-size: xx-large
+}
+.has-border-right {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #ccc
+}
+.index-btn {
+    border: 1px solid white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: transparent;
+    font: 300 xx-large Raleway;
+    font-stretch: normal;
+    -webkit-font-feature-settings: normal;
+    -moz-font-feature-settings: normal;
+    font-feature-settings: normal;
+    -webkit-font-kerning: auto;
+    -moz-font-kerning: auto;
+    font-kerning: auto;
+    -webkit-font-variant-ligatures: normal;
+    -moz-font-variant-ligatures: normal;
+    font-variant-ligatures: normal;
+    width: 400px;
+    margin: 10px;
+    color: white;
+}
+.index-btn:focus,
+.index-btn:hover {
+    background-color: rgba(248, 248, 248, .2);
+    color: #fff
+}
+.statistics-disclaimer {
+    padding-top: 3%
+}
+.jumbotron.text-center.jumbo-with-blueprint {
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url(/images/blueprint.jpg);
+    color: #fff;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat
+}
+.vertical-aligned {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+.full-height {
+    height: 100%
+}
+.full-width {
+    width: 100%
+}
+.jumbotron.text-center.even-jumbo.header-jumbo {
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    background-attachment: scroll;
+    background-image: url(/images/jumbo-cover.jpg)
+}
+.jumbotron.text-center.jumbo-white {
+    background-color: #fff
+}
+.top-bottom-margined {
+    margin-bottom: 15px;
+    margin-top: 15px
+}
+.section-title {
+    font-size: x-large;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+.no-margin {
+    margin: 0
+}
+.text-large {
+    font-size: large
+}
+a:hover {
+    text-decoration: underline
+}
+.help-header {
+    font-weight: 700;
+    font-size: 40px
+}
+.help-p {
+    text-indent: 5%
+}
+.tut-nav {
+    line-height: 150%;
+    color: #3bc492
+}
+.faq-well,
+.tut-well {
+    padding: 12px;
+    margin-top: 25px;
+    margin-left: 2px
+}
+.scroll-up-btn {
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    z-index: 0
+}
+.feedback-body {
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-right: 25%
+}
+.required-asterisk {
+    color: red
+}
+.feedback-form {
+    border: 1px solid #ddd;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f5f5f5
+}
+.social-icon {
+    width: 50px
+}
+.office {
+    margin-left: 10%;
+    line-height: 1.3
+}
+#dashboard {
+    padding: 10px
+}
+.collaborators {
+    padding: 5px
+}
+#all-tasks {
+    padding: 10px
+}
+.task-header {
+    padding-bottom: 15px
+}
+.title-col {
+    width: 27%
+}
+.author-col,
+.created-col {
+    width: 10%
+}
+.joined-col {
+    width: 20%
+}
+.post-col,
+.view-col {
+    width: 8%
+}
+.last-active-col {
+    width: 17%
+}
+.img-inline {
+    max-width: 40px;
+    display: inline-block;
+    padding: 0 2px
+}
+.inline {
+    display: inline-block
+}
+.padding-bottom {
+    padding-bottom: 10px
+}
+.solution-thread {
+    position: relative;
+    z-index: 1
+}
+.triangle {
+    position: relative;
+    margin: 10px;
+    color: #000;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px
+}
+.triangle.left {
+    margin-left: 20px;
+    background: #fff
+}
+.triangle::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    border: solid;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    /*!  reduce the damage in FF3.0 */
+    
+    display: block;
+    width: 0
+}
+.triangle.left::after {
+    top: 10px;
+    /*!  controls vertical position */
+    
+    left: -20px;
+    /*!  value = - border-left-width - border-right-width */
+    
+    bottom: auto;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #fff
+}
+.solution-profile-pic {
+    float: left;
+    margin-top: 10px
+}
+.solution-content {
+    padding: 15px 15px 15px 40px
+}
+.thread-panel {
+    position: absolute;
+    left: 8px;
+    width: 40px;
+    height: 100%;
+    background: #d3d3d3
+}
+.thread-panel .glyphicon {
+    padding: 10px 0;
+    display: block;
+    text-align: center
+}
+.discuss-stats {
+    width: 400px;
+    max-width: 400px;
+    margin: 0
+}
+.table>tbody>tr>td {
+    border: none;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 2px;
+    vertical-align: middle
+}
+.discussion-author-pic {
+    width: 10%
+}
+.discussion-author,
+.discussion-post-date {
+    width: 30%
+}
+.discussion-post,
+.discussion-post-stats,
+.discussion-view,
+.discussion-view-number {
+    max-width: 50px
+}
+.margin-top-bottom {
+    margin: 10px 0
+}

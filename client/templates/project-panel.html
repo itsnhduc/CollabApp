@@ -1,0 +1,316 @@
+<template name="project-panel">
+    <div class="container main">
+        <div class="help-post">
+            <img class="img-responsive" src="assets/img/collage-sample.png">
+            <div class="row">
+                <div class="col-md-8 project-title">
+                    PROJECT TITLE HERE
+                </div>
+                <div class="col-md-2">
+                    <br>
+                    <span>Viewing as <select class="form-control" id="select">
+                        <option>
+                            Collaborator
+                        </option>
+                        <option>
+                            Explorer
+                        </option>
+                        <option>
+                            Public
+                        </option>
+                    </select></span>
+                </div>
+            </div>
+        </div>
+        <div class="row" draggable="true">
+            <div class="col-md-8" style="height:100%">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab1" data-toggle="tab">Topics</a>
+                        </li>
+                        <li draggable="true">
+                            <a href="#tab2" data-toggle="tab">Timeline</a>
+                        </li>
+                        <li>
+                            <a href="#tab3" data-toggle="tab">Files</a>
+                        </li>
+                        <li>
+                            <a href="#tab4" data-toggle="tab">Settings</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                        <div draggable="true" class="tab-pane active main-right" id="tab1">
+                            <div class="topic-view">
+                                <div class="topic">
+                                    <p class="topic-title">
+                                        Topic 2 <span class="glyphicon glyphicon-edit glyph-btn"></span>
+                                    </p>
+                                    <div>
+                                        <em>Posted on December 23, 2013 by <a href="#">You</a></em>
+                                    </div>
+                                    <blockquote class="topic-content">
+                                        Lorem ipsum dolor sit amet, ad duo ferri dicta, vel oblique probatus eu. Vis affert sapientem no, vis no malis omnes suavitate, tale malis nonumes has ex.
+                                        Usu te affert tibique aliquando, propriae luptatum liberavisse est cu. Cibo elitr imperdiet ex mea, ad est tation graeci feugait. Sea porro electram
+                                        reformidans id. Summo labores quaestio at eos.
+                                    </blockquote>
+                                </div>
+                                <hr>
+                                <div class="topic">
+                                    <p class="topic-title">
+                                        Topic 1
+                                    </p>
+                                    <div>
+                                        <em>Posted on March 02, 2013 by <a href="#">Bob</a></em>
+                                    </div>
+                                    <blockquote class="topic-content">
+                                        Ea nam errem nominati liberavisse, ius ei tractatos disputando. At qui scripta accusata disputando, ea eum oratio doming. Ei vix electram sapientem, dolore
+                                        ullamcorper at has, nec ad probo oporteat. Nec dictas fierent no, sed wisi scripta te, pri utinam graece essent id.
+                                    </blockquote>
+                                </div>
+                                <ul class="pager">
+                                    <li>
+                                        <a href="#">Previous</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <table class="table timeline">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            #
+                                        </th>
+                                        <th>
+                                            Timestamp
+                                        </th>
+                                        <th>
+                                            Event
+                                        </th>
+                                        <th>
+                                            Status
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="event-done">
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                            Dec 25th
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit amet
+                                        </td>
+                                        <td>
+                                            <span class="badge status-done">Done</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="event-inprogress">
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            Jan 1st
+                                        </td>
+                                        <td>
+                                            Excepteur sint occaecat cupidatat non proident
+                                        </td>
+                                        <td>
+                                            <span class="badge status-inprogress">In Progress</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3
+                                        </td>
+                                        <td>
+                                            March 15th
+                                        </td>
+                                        <td>
+                                            Sed ut perspiciatis unde omnis iste natus error sit
+                                        </td>
+                                        <td>
+                                            <span class="badge status-waiting">Waiting</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            4
+                                        </td>
+                                        <td>
+                                            March 20th
+                                        </td>
+                                        <td>
+                                            At vero eos et accusamus et iusto odio dignissimos
+                                        </td>
+                                        <td>
+                                            <span class="badge status-waiting">Waiting</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <div class="well">
+                                <div class="row">
+                                    <div class="col-md-4 text-center" style="font-size:x-large; height:100%">
+                                        <span class="glyphicon glyphicon-folder-close"></span>
+                                        <p>
+                                            Folder 1
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center" style="font-size:x-large; height:100%">
+                                        <span class="glyphicon glyphicon-folder-close"></span>
+                                        <p>
+                                            Folder 2
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center" style="font-size:x-large; height:100%">
+                                        <span class="glyphicon glyphicon-facetime-video"></span>
+                                        <p>
+                                            Video
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-center" style="font-size:x-large; height:100%">
+                                        <span class="glyphicon glyphicon-music"></span>
+                                        <p>
+                                            Music
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center" style="font-size:x-large; height:100%">
+                                        <span class="glyphicon glyphicon-compressed"></span>
+                                        <p>
+                                            Archive
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center" style="font-size:x-large; height:100%">
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                        <p>
+                                            Picture
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4">
+                            <div class="panel-group proj-settings" id="accordion-kuoo">
+                                <div class="panel panel-default" data-count="1">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-kuoo" href="#collapse1-kuoo">Settings Group #1</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1-kuoo" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p>
+                                                Collapse content 1
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" data-count="2">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-kuoo" href="#collapse2-kuoo">Settings Group #2</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2-kuoo" class="panel-collapse collapse collapse">
+                                        <div class="panel-body">
+                                            <p>
+                                                Collapse content 2
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" data-count="3">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-kuoo" href="#collapse3-kuoo">Settings Group #3</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3-kuoo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>
+                                                Collapse content 3
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="right-section">
+                    <div class="right-header">
+                        <h3 style="margin-top:7px">
+                            Tools <span class="glyphicon glyphicon-fullscreen glyph-btn"></span> <span class="glyphicon glyphicon-edit glyph-btn"></span>
+                        </h3>
+                        <hr style="margin-top:0px; margin-bottom:10px">
+                    </div>
+                    <div class="right-content">
+                        <div class="row tool-row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="//placehold.it/350x150">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="//placehold.it/350x150">
+                            </div>
+                        </div>
+                        <div class="row tool-row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="//placehold.it/350x150">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="//placehold.it/350x150">
+                            </div>
+                        </div>
+                        <div class="row tool-row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="//placehold.it/350x150">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="//placehold.it/350x150">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="right-header">
+                        <h3 style="margin-top:7px">
+                            Stats <span class="glyphicon glyphicon-fullscreen glyph-btn"></span> <span class="glyphicon glyphicon-floppy-save glyph-btn"></span>
+                        </h3>
+                        <hr style="margin-top:0px; margin-bottom:10px">
+                    </div>
+                    <div class="right-content">
+                        <p style="margin-top:0px">
+                            <b>View:</b> 13,250 (121 today)<br>
+                            <b>Comments:</b> 1,780 (9 today)<br>
+                            <b>Shares:</b> 32 (1 today)<br>
+                            <b>Fund raised to date:</b> S$5,000<br>
+                            <b>Rating:</b> <span class="glyphicon glyphicon-star star-gold"></span> <span class="glyphicon glyphicon-star star-gold"></span> <span class=
+                            "glyphicon glyphicon-star star-gold"></span> <span class="glyphicon glyphicon-star star-gold"></span> <span class="glyphicon glyphicon-star"></span><br>
+                            <b>Work distribution graph:</b><br>
+                            <img draggable="true" class="img-responsive" src="assets/img/graph.png">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.row -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <footer class="footer-min">
+        <p>
+            CollabApp &copy; 2015
+        </p>
+    </footer>
+</template>
