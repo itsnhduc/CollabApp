@@ -27,20 +27,22 @@ block body-content
       button.btn.btn-primary.center-block New
       .row.center-block#category
         h5 Categories
-        .list-group
-          button.list-group-item(type="button") Category 1
-          button.list-group-item(type="button") Category 2
-          button.list-group-item(type="button") Category 3
-          button.list-group-item(type="button") Category 4
-          button.list-group-item(type="button") Category 5
+        .input-group
+          .input-group-button
+            button.btn.btn-default Category 1
+            button.btn.btn-default Category 2
+            button.btn.btn-default Category 3
+            button.btn.btn-default Category 4
+            button.btn.btn-default Category 5
       .row.center-block#tags
         h5 Tags
-        .list-group
-          button.list-group-item(type="button") Tag 1
-          button.list-group-item(type="button") Tag 2
-          button.list-group-item(type="button") Tag 3
-          button.list-group-item(type="button") Tag 4
-          button.list-group-item(type="button") Tag 5
+        .input-group
+          .input-group-button
+            button.btn.btn-default Tag 1
+            button.btn.btn-default Tag 2
+            button.btn.btn-default Tag 3
+            button.btn.btn-default Tag 4
+            button.btn.btn-default Tag 5
     .col-md-10#right-panel
       .row.center-block#sorting-row
         .col-md-4
@@ -66,7 +68,7 @@ block body-content
                 span.input-group-addon.glyphicon.glyphicon-search 
       .row#load-content
         .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
-          img.center-block(src="http://placehold.it/500x300")
+          img.img-responsive(src="http://placehold.it/500x300")
           .content-pill-title Title
           .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           .well.zero-padding.content-pill-footer
@@ -78,7 +80,7 @@ block body-content
               span 999
             span.pull-right post date
         .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
-          img.center-block(src="http://placehold.it/500x300")
+          img.img-responsive(src="http://placehold.it/500x300")
           .content-pill-title Title
           .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           .well.zero-padding.content-pill-footer
@@ -90,7 +92,7 @@ block body-content
               span 999
             span.pull-right post date
         .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
-          img.center-block(src="http://placehold.it/500x300")
+          img.img-responsive(src="http://placehold.it/500x300")
           .content-pill-title Title
           .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           .well.zero-padding.content-pill-footer
@@ -102,7 +104,7 @@ block body-content
               span 999
             span.pull-right post date
         .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
-          img.center-block(src="http://placehold.it/500x300")
+          img.img-responsive(src="http://placehold.it/500x300")
           .content-pill-title Title
           .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           .well.zero-padding.content-pill-footer
@@ -113,4 +115,29 @@ block body-content
               span.glyphicon.glyphicon-stats
               span 999
             span.pull-right post date
-          
+        .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
+          img.img-responsive(src="http://placehold.it/500x300")
+          .content-pill-title Title
+          .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .well.zero-padding.content-pill-footer
+            .badge
+              span.glyphicon.glyphicon-eye-open
+              span 999
+            .badge
+              span.glyphicon.glyphicon-stats
+              span 999
+            span.pull-right post date
+
+block script
+  script.
+    $(document).ready(function() {
+      var screen_height = $(window).height();
+      var navbar_content_height = $('.navbar').height();
+      var content_height = screen_height - navbar_content_height;
+      $('#left-panel').css('height', content_height + 'px');
+      $('#right-panel').css('height', content_height + 'px');
+      $('#left-panel').css('max-height', content_height + 'px');
+      $('#right-panel').css('max-height', content_height + 'px');
+    })
+
+block footer
