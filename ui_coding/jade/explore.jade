@@ -1,0 +1,116 @@
+extends layout.jade
+
+block title
+  title Explore | CollabApp
+
+block navbar-link
+  ul.nav.navbar-nav
+    li.active
+      a Explore
+    li
+      // link to another page
+      a(href='community.html') Community
+    li
+      // link to another page
+      a(href='help.html') Help
+  ul.nav.navbar-nav.navbar-right
+    li
+      // add modal
+      a(href='#login') Login
+    li
+      // add modal
+      a(href='#register') Register
+
+block body-content
+  .container-fluid.zero-margin.zero-padding
+    .col-md-2#left-panel
+      button.btn.btn-primary.center-block New
+      .row.center-block#category
+        h5 Categories
+        .list-group
+          button.list-group-item(type="button") Category 1
+          button.list-group-item(type="button") Category 2
+          button.list-group-item(type="button") Category 3
+          button.list-group-item(type="button") Category 4
+          button.list-group-item(type="button") Category 5
+      .row.center-block#tags
+        h5 Tags
+        .list-group
+          button.list-group-item(type="button") Tag 1
+          button.list-group-item(type="button") Tag 2
+          button.list-group-item(type="button") Tag 3
+          button.list-group-item(type="button") Tag 4
+          button.list-group-item(type="button") Tag 5
+    .col-md-10#right-panel
+      .row.center-block#sorting-row
+        .col-md-4
+          form.form-inline
+            .form-group
+              label Viewing:
+              select.form-control
+                option Any
+                option Projects
+                option Brainstorm
+        .col-md-4
+          form.form-inline
+            .form-group
+              label Sort by:
+              select.form-control
+                option Newest
+                option Most viewed
+        .col-md-4
+          form.form-inline
+            .form-group
+              .input-group
+                input.form-control(type='text', placeholder='Search')
+                span.input-group-addon.glyphicon.glyphicon-search 
+      .row#load-content
+        .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
+          img.center-block(src="http://placehold.it/500x300")
+          .content-pill-title Title
+          .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .well.zero-padding.content-pill-footer
+            .badge
+              span.glyphicon.glyphicon-eye-open
+              span 999
+            .badge
+              span.glyphicon.glyphicon-stats
+              span 999
+            span.pull-right post date
+        .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
+          img.center-block(src="http://placehold.it/500x300")
+          .content-pill-title Title
+          .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .well.zero-padding.content-pill-footer
+            .badge
+              span.glyphicon.glyphicon-eye-open
+              span 999
+            .badge
+              span.glyphicon.glyphicon-stats
+              span 999
+            span.pull-right post date
+        .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
+          img.center-block(src="http://placehold.it/500x300")
+          .content-pill-title Title
+          .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .well.zero-padding.content-pill-footer
+            .badge
+              span.glyphicon.glyphicon-eye-open
+              span 999
+            .badge
+              span.glyphicon.glyphicon-stats
+              span 999
+            span.pull-right post date
+        .col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill
+          img.center-block(src="http://placehold.it/500x300")
+          .content-pill-title Title
+          .content-pill-description.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .well.zero-padding.content-pill-footer
+            .badge
+              span.glyphicon.glyphicon-eye-open
+              span 999
+            .badge
+              span.glyphicon.glyphicon-stats
+              span 999
+            span.pull-right post date
+          

@@ -1,0 +1,59 @@
+extends layout.jade
+
+block body-content
+  //.col-md-12.zero-margin.zero-padding
+  //  img#backdrop(src="http://placehold.it/1349x600")
+  .container-fuild.zero-margin.zero-padding#backdrop
+    .text-center#slogan
+      h2 CollabApp
+      h4 Online collaboration made easy
+    .text-center#slogan-mobile
+      h2 CollabApp
+      h4 Online collaboration made easy
+  .container-fluid#featuring
+    .row.row-padding
+      .col-md-8.col-md-push-4
+        img.img-responsive.center-block(src="http://placehold.it/750x300")
+      .col-md-4.col-md-pull-8.text-center
+        h4 Share your idea
+        h6.text-left Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed nulla arcu. Phasellus aliquam est consequat condimentum aliquet. Maecenas pellentesque leo ligula, gravida egestas ex dictum eu. Nullam ut interdum elit. Etiam purus ex, eleifend at condimentum ac, gravida nec lacus. 
+    .row.row-padding
+      .col-md-8
+        img.img-responsive.center-block(src="http://placehold.it/750x300")
+      .col-md-4.text-center
+        h4 Initiate a project
+        h6.text-left Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed nulla arcu. Phasellus aliquam est consequat condimentum aliquet. Maecenas pellentesque leo ligula, gravida egestas ex dictum eu. Nullam ut interdum elit. Etiam purus ex, eleifend at condimentum ac, gravida nec lacus. 
+    .row.row-padding
+      .col-md-8.col-md-push-4
+        img.img-responsive.center-block(src="http://placehold.it/750x300")
+      .col-md-4.col-md-pull-8.text-center
+        h4 Collaborate with people
+        h6.text-left Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed nulla arcu. Phasellus aliquam est consequat condimentum aliquet. Maecenas pellentesque leo ligula, gravida egestas ex dictum eu. Nullam ut interdum elit. Etiam purus ex, eleifend at condimentum ac, gravida nec lacus.
+  .container-fluid.text-center#featuring-2
+    img.img-responsive.center-block.img-connect-all(src="./img/all_connected.png")
+    h4 No matter what role you are, <br>your contribution is essential to our growth.
+  .container-fluid#stats
+    .row.text-center
+      h2 Join the movement
+    .row.text-center.center-block#stats-row
+      .col-md-3
+        h4 Community<br>Members
+        h5 999,000
+      .col-md-3
+        h4 On-going<br>Projects
+        h5 999,000
+      .col-md-3
+        h4 Commercialized<br>Products
+        h5 999,000
+      .col-md-3
+        h4 Revenue<br>Generated
+        h5 999,000
+    .row.text-center
+      h3 You are just few steps a way!!
+      .col-md-3
+      .col-md-6
+        form
+          .form-group
+            input.form-control(type="email", id="sign-up-email", placeholder="Your Email")
+          button.btn.btn-primary(type="submit") Let's Begin
+      .col-md-3

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
+    <!-- Bootstrap-->
+    <link href="css/bootstrap_paper.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <title>Explore | CollabApp</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    
+    -->
+  </head>
+  <body>
+    <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">CollabApp</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a>Explore</a></li>
+            <li>
+              <!-- link to another page--><a href="community.html">Community</a>
+            </li>
+            <li>
+              <!-- link to another page--><a href="help.html">Help</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <!-- add modal--><a href="#login">Login</a>
+            </li>
+            <li>
+              <!-- add modal--><a href="#register">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid zero-margin zero-padding">
+      <div id="left-panel" class="col-md-2">
+        <button class="btn btn-primary center-block">New</button>
+        <div id="category" class="row center-block">
+          <h5>Categories</h5>
+          <div class="list-group">
+            <button type="button" class="list-group-item">Category 1</button>
+            <button type="button" class="list-group-item">Category 2</button>
+            <button type="button" class="list-group-item">Category 3</button>
+            <button type="button" class="list-group-item">Category 4</button>
+            <button type="button" class="list-group-item">Category 5</button>
+          </div>
+        </div>
+        <div id="tags" class="row center-block">
+          <h5>Tags</h5>
+          <div class="list-group">
+            <button type="button" class="list-group-item">Tag 1</button>
+            <button type="button" class="list-group-item">Tag 2</button>
+            <button type="button" class="list-group-item">Tag 3</button>
+            <button type="button" class="list-group-item">Tag 4</button>
+            <button type="button" class="list-group-item">Tag 5</button>
+          </div>
+        </div>
+      </div>
+      <div id="right-panel" class="col-md-10">
+        <div id="sorting-row" class="row center-block">
+          <div class="col-md-4">
+            <form class="form-inline">
+              <div class="form-group">
+                <label>Viewing:</label>
+                <select class="form-control">
+                  <option>Any</option>
+                  <option>Projects</option>
+                  <option>Brainstorm</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <form class="form-inline">
+              <div class="form-group">
+                <label>Sort by:</label>
+                <select class="form-control">
+                  <option>Newest</option>
+                  <option>Most viewed</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" placeholder="Search" class="form-control"><span class="input-group-addon glyphicon glyphicon-search"> </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="load-content" class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="center-block">
+            <div class="content-pill-title">Title</div>
+            <div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="well zero-padding content-pill-footer">
+              <div class="badge"><span class="glyphicon glyphicon-eye-open"></span><span>999</span></div>
+              <div class="badge"><span class="glyphicon glyphicon-stats"></span><span>999</span></div><span class="pull-right">post date</span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="center-block">
+            <div class="content-pill-title">Title</div>
+            <div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="well zero-padding content-pill-footer">
+              <div class="badge"><span class="glyphicon glyphicon-eye-open"></span><span>999</span></div>
+              <div class="badge"><span class="glyphicon glyphicon-stats"></span><span>999</span></div><span class="pull-right">post date</span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="center-block">
+            <div class="content-pill-title">Title</div>
+            <div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="well zero-padding content-pill-footer">
+              <div class="badge"><span class="glyphicon glyphicon-eye-open"></span><span>999</span></div>
+              <div class="badge"><span class="glyphicon glyphicon-stats"></span><span>999</span></div><span class="pull-right">post date</span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="center-block">
+            <div class="content-pill-title">Title</div>
+            <div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="well zero-padding content-pill-footer">
+              <div class="badge"><span class="glyphicon glyphicon-eye-open"></span><span>999</span></div>
+              <div class="badge"><span class="glyphicon glyphicon-stats"></span><span>999</span></div><span class="pull-right">post date</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed-->
+    <script src="js/bootstrap_3.36_min.js"></script>
+    <footer id="footer" class="container-fluid">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <h5>CollabApp Logo</h5>
+        <h6>All rights reserved &#169;</h6>
+      </div>
+      <div class="col-md-4 text-right bottom-align-text">
+        <h6>School of Mechanical And Aerospace Engineering<br>Nanyang Technological University, Singapore</h6>
+      </div>
+      <div class="col-md-2"></div>
+    </footer>
+  </body>
+</html>
