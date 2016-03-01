@@ -1,35 +1,4 @@
 <template name="explore">
-	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="index.html" class="navbar-brand">CollabApp</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a>Explore</a></li>
-					<li>
-						<!-- link to another page--><a href="community.html">Community</a>
-					</li>
-					<li>
-						<!-- link to another page--><a href="help.html">Help</a>
-					</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<!-- add modal--><a href="#login">Login</a>
-					</li>
-					<li>
-						<!-- add modal--><a href="#register">Register</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
 	<div class="container-fluid zero-margin zero-padding">
 		<div id="left-panel" class="col-md-2">
 			<button class="btn btn-primary center-block">New</button>
@@ -95,81 +64,23 @@
 				</div>
 			</div>
 			<div id="load-content" class="row">
-				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
-					<div class="content-pill-title">Title</div>
-					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-					<div class="well zero-padding content-pill-footer">
-						<div class="badge">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>999</span>
+				{{#each projects}}
+					<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+						<div class="content-pill-title">{{title}}</div>
+						<div class="content-pill-description text-justify">{{description}}</div>
+						<div class="well zero-padding content-pill-footer">
+							<div class="badge">
+								<span class="glyphicon glyphicon-eye-open"></span>
+								<span>{{views}}</span>
+							</div>
+							<div class="badge">
+								<span class="glyphicon glyphicon-stats"></span>
+								<span>{{stats}}</span>
+							</div>
+							<span class="pull-right">{{createdAt}}</span>
 						</div>
-						<div class="badge">
-							<span class="glyphicon glyphicon-stats"></span>
-							<span>999</span>
-						</div>
-						<span class="pull-right">post date</span>
 					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
-					<div class="content-pill-title">Title</div>
-					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-					<div class="well zero-padding content-pill-footer">
-						<div class="badge">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>999</span>
-						</div>
-						<div class="badge">
-							<span class="glyphicon glyphicon-stats"></span>
-							<span>999</span>
-						</div>
-						<span class="pull-right">post date</span>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
-					<div class="content-pill-title">Title</div>
-					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-					<div class="well zero-padding content-pill-footer">
-						<div class="badge">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>999</span>
-						</div>
-						<div class="badge">
-							<span class="glyphicon glyphicon-stats"></span>
-							<span>999</span>
-						</div>
-						<span class="pull-right">post date</span>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
-					<div class="content-pill-title">Title</div>
-					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-					<div class="well zero-padding content-pill-footer">
-						<div class="badge">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>999</span>
-						</div>
-						<div class="badge">
-							<span class="glyphicon glyphicon-stats"></span>
-							<span>999</span>
-						</div>
-						<span class="pull-right">post date</span>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
-					<div class="content-pill-title">Title</div>
-					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-					<div class="well zero-padding content-pill-footer">
-						<div class="badge">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>999</span>
-						</div>
-						<div class="badge">
-							<span class="glyphicon glyphicon-stats"></span>
-							<span>999</span>
-						</div>
-						<span class="pull-right">post date</span>
-					</div>
-				</div>
+				{{/each}}
 			</div>
 		</div>
 	</div>

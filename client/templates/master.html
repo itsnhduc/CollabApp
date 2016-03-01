@@ -1,3 +1,39 @@
 <template name="master">
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="{{pathFor route='index'}}" class="navbar-brand">CollabApp</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<!-- link to another page--><a href="{{pathFor route='explore'}}">Brainstorm</a>
+					</li>
+					<li>
+						<!-- link to another page--><a href="{{pathFor route='explore'}}">Projects</a>
+					</li>
+					<li>
+						<!-- link to another page--><a href="{{pathFor route='community'}}">Community</a>
+					</li>
+					<li>
+						<!-- link to another page--><a href="{{pathFor route='help'}}">Help</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<!-- add modal--><a href="#login">Login</a>
+					</li>
+					<li>
+						<!-- add modal--><a href="#register">Register</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	{{> yield}}
 </template>
