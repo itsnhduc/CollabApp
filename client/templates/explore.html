@@ -1,158 +1,176 @@
 <template name="explore">
-    <div class="container-fluid margin-top">
-        <div class="col-xs-3 col-md-2 left-panel">
-            <button class="btn btn-primary newBtn center-block">
-                New
-            </button>
-            <div class="row category">
-                <h3>
-                    Categories
-                </h3>
-                <div class="list-group">
-                    <button type="button" class="list-group-item">
-                        Category 1
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Category 2
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Category 3
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Category 4
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Category 5
-                    </button>
-                </div>
-            </div>
-            <div class="row tags">
-                <h3>
-                    Tags
-                </h3>
-                <div class="list-group">
-                    <button type="button" class="list-group-item">
-                        Tag 1
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Tag 2
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Tag 3
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Tag 4
-                    </button>
-                    <button type="button" class="list-group-item">
-                        Tag 5
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-9 col-md-10 right-panel">
-            <div class="row">
-                <div class="col-xs-6 col-md-9">
-                    <div role="group" class="btn-group">
-                        <button type="button" class="btn btn-default">
-                            New
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            Updated
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            Most viewed
-                        </button>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="text" placeholder="Search" class="form-control"><span class="input-group-addon glyphicon glyphicon-search"></span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="container-fluid margin-top">
-                <div class="col-xs-4 col-md-3 content">
-                    <img src="//placehold.it/220x150" class="img-responsive center-block">
-                    <h5>
-                        Title
-                    </h5>
-                    <h6>
-                        Description
-                    </h6>
-                    <h5>
-                        Tags
-                    </h5>
-                </div>
-                <div class="col-xs-4 col-md-3 content">
-                    <img src="//placehold.it/220x150" class="img-responsive center-block">
-                    <h5>
-                        Title
-                    </h5>
-                    <h6>
-                        Description
-                    </h6>
-                    <h5>
-                        Tags
-                    </h5>
-                </div>
-                <div class="col-xs-4 col-md-3 content">
-                    <img src="//placehold.it/220x150" class="img-responsive center-block">
-                    <h5>
-                        Title
-                    </h5>
-                    <h6>
-                        Description
-                    </h6>
-                    <h5>
-                        Tags
-                    </h5>
-                </div>
-                <div class="col-xs-4 col-md-3 content">
-                    <img src="//placehold.it/220x150" class="img-responsive center-block">
-                    <h5>
-                        Title
-                    </h5>
-                    <h6>
-                        Description
-                    </h6>
-                    <h5>
-                        Tags
-                    </h5>
-                </div>
-                <div class="col-xs-4 col-md-3 content">
-                    <img src="//placehold.it/220x150" class="img-responsive center-block">
-                    <h5>
-                        Title
-                    </h5>
-                    <h6>
-                        Description
-                    </h6>
-                    <h5>
-                        Tags
-                    </h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer id="footerwrap" class="jumbotron">
-        <div class="row">
-            <div class="col-md-3 col-md-offset-4">
-                <h3>
-                    Contact us
-                </h3><span class="glyphicon glyphicon-phone"></span>&nbsp;9999999<br>
-                <span class="glyphicon glyphicon-envelope"></span>&nbsp;something@somehost.com
-            </div>
-            <div class="col-md-5">
-                CollabApp &copy; 2015<br>
-                School of Mechanical and Aerospace Engineering<br>
-                Nanyang Technological University, Singapore<br>
-                All rights reserved
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">CollabApp</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a>Explore</a></li>
+					<li>
+						<!-- link to another page--><a href="community.html">Community</a>
+					</li>
+					<li>
+						<!-- link to another page--><a href="help.html">Help</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<!-- add modal--><a href="#login">Login</a>
+					</li>
+					<li>
+						<!-- add modal--><a href="#register">Register</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid zero-margin zero-padding">
+		<div id="left-panel" class="col-md-2">
+			<button class="btn btn-primary center-block">New</button>
+			<div id="category" class="row center-block">
+				<h5>Categories</h5>
+				<div class="input-group">
+					<div class="input-group-button">
+						<button class="btn btn-default">Category 1</button>
+						<button class="btn btn-default">Category 2</button>
+						<button class="btn btn-default">Category 3</button>
+						<button class="btn btn-default">Category 4</button>
+						<button class="btn btn-default">Category 5</button>
+					</div>
+				</div>
+			</div>
+			<div id="tags" class="row center-block">
+				<h5>Tags</h5>
+				<div class="input-group">
+					<div class="input-group-button">
+						<button class="btn btn-default">Tag 1</button>
+						<button class="btn btn-default">Tag 2</button>
+						<button class="btn btn-default">Tag 3</button>
+						<button class="btn btn-default">Tag 4</button>
+						<button class="btn btn-default">Tag 5</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="right-panel" class="col-md-10">
+			<div id="sorting-row" class="row center-block">
+				<div class="col-md-4">
+					<form class="form-inline">
+						<div class="form-group">
+							<label>Viewing:</label>
+							<select class="form-control">
+								<option>Any</option>
+								<option>Projects</option>
+								<option>Brainstorm</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<form class="form-inline">
+						<div class="form-group">
+							<label>Sort by:</label>
+							<select class="form-control">
+								<option>Newest</option>
+								<option>Most viewed</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<form class="form-inline">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" placeholder="Search" class="form-control">
+								<span class="input-group-addon glyphicon glyphicon-search"> </span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="load-content" class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+					<div class="content-pill-title">Title</div>
+					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					<div class="well zero-padding content-pill-footer">
+						<div class="badge">
+							<span class="glyphicon glyphicon-eye-open"></span>
+							<span>999</span>
+						</div>
+						<div class="badge">
+							<span class="glyphicon glyphicon-stats"></span>
+							<span>999</span>
+						</div>
+						<span class="pull-right">post date</span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+					<div class="content-pill-title">Title</div>
+					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					<div class="well zero-padding content-pill-footer">
+						<div class="badge">
+							<span class="glyphicon glyphicon-eye-open"></span>
+							<span>999</span>
+						</div>
+						<div class="badge">
+							<span class="glyphicon glyphicon-stats"></span>
+							<span>999</span>
+						</div>
+						<span class="pull-right">post date</span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+					<div class="content-pill-title">Title</div>
+					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					<div class="well zero-padding content-pill-footer">
+						<div class="badge">
+							<span class="glyphicon glyphicon-eye-open"></span>
+							<span>999</span>
+						</div>
+						<div class="badge">
+							<span class="glyphicon glyphicon-stats"></span>
+							<span>999</span>
+						</div>
+						<span class="pull-right">post date</span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+					<div class="content-pill-title">Title</div>
+					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					<div class="well zero-padding content-pill-footer">
+						<div class="badge">
+							<span class="glyphicon glyphicon-eye-open"></span>
+							<span>999</span>
+						</div>
+						<div class="badge">
+							<span class="glyphicon glyphicon-stats"></span>
+							<span>999</span>
+						</div>
+						<span class="pull-right">post date</span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+					<div class="content-pill-title">Title</div>
+					<div class="content-pill-description text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+					<div class="well zero-padding content-pill-footer">
+						<div class="badge">
+							<span class="glyphicon glyphicon-eye-open"></span>
+							<span>999</span>
+						</div>
+						<div class="badge">
+							<span class="glyphicon glyphicon-stats"></span>
+							<span>999</span>
+						</div>
+						<span class="pull-right">post date</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
