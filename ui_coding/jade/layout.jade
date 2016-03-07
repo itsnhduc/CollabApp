@@ -8,6 +8,7 @@ html(lang='en')
     // Bootstrap
     link(href='css/bootstrap_paper.css', rel='stylesheet')
     link(href='css/custom.css', rel='stylesheet')
+    block link
     
     block title
       title CollabApp
@@ -45,10 +46,10 @@ html(lang='en')
             ul.nav.navbar-nav.navbar-right
               li
                 // add modal
-                a(href='#login') Login
+                a(href='#') Login
               li
                 // add modal
-                a(href='#register') Register
+                a(href='#') Register
       
     block body-content
       h1 Hello, world!

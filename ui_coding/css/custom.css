@@ -109,12 +109,60 @@ body {
 #sorting-row {
     padding: 10px 5px;
 }
+.content-pill {
+    margin: 3px 0px;
+    color: inherit;
+    text-decoration: none;
+}
+.content-pill:hover, .content-pill:visited, .content-pill:focus {
+    color: inherit;
+    text-decoration: none;
+}
 .content-pill-title {
-    font-size: 25px;
+    font-size: 24px;
+}
+.content-pill-author {
+    vertical-align: middle;
+}
+.content-pill-footer .label {
+    font-size: 12px;
+    vertical-align: middle;
 }
 .content-pill-description {
     font-size: 14px;
 }
 .content-pill-footer {
-    padding: 5px;
+    padding: 5px 0px;
+}
+/* idea page */
+.brainstorm-details {
+    padding: 5px 0px;
+}
+.image-gallery {
+    height: 500px;
+    max-height: 500px;
+}
+.gallery-on-view {
+    height: 300px;
+    max-height: 300px;
+}
+.gallery-thumbnail {
+    padding: 5px 0px;
+    height: 300px;
+    max-height: 300px;
+}
+.owl-carousel {
+    margin: 5px 0px;
+}
+.owl-carousel img {
+    padding: 0px 5px;
+}
+.owl-carousel img:hover {
+    border: 1px solid #000000;
+}
+#ideas {
+    padding: 10px 0px;
+}
+.margin-top-bottom {
+    margin: 10px 0px;
 }
