@@ -77,6 +77,9 @@
               <div class="row">View</div>
             </div>
           </div>
+          <div class="row brainstorm-update-me-button">
+            <button class="btn btn-warning center-block">Update Me!</button>
+          </div>
         </div>
         <div class="col-md-pull-2 col-md-10 image-gallery">
           <div id="image-gallery" data-ride="carousel" class="carousel slide">
@@ -130,91 +133,48 @@
               </div></a>
           </div>
           <div id="comments" role="tabpanel" class="tab-pane">
-            <button class="btn btn-success margin-top-bottom">Comment</button>
-            <div class="well well-sm col-md-11">
-              <div class="row task-header">
-                <div class="text-left col-md-12 inline task-title">Task title<span class="glyphicon glyphicon-remove"></span></div>
-                <div class="col-xs-2 col-md-1 text-right">field :</div>
-                <div class="col-xs-10 col-md-8">
-                  <div class="label label-primary">Field 1</div>
-                  <div class="label label-primary">Field 2</div>
-                  <div class="label label-primary">Field 3</div>
-                  <div class="label label-primary">Field 4</div>
-                  <div class="label label-primary">Field 5</div>
-                </div>
-              </div>
-              <div class="panel-footer">9 people are working on this</div>
+            <div id="comment-form" class="container-fluid">
+              <textarea type="text" placeholder="Comment here" rows="5" data-autoresize class="col-xs-12 col-md-8"></textarea>
+              <div class="col-md-4"></div>
+              <button id="submit-button" type="submit" class="btn btn-success">Post</button>
             </div>
-            <div class="well well-sm col-md-11">
-              <h3 class="col-md-12">Task title</h3>
-              <div class="row task-header">
-                <div class="col-xs-2 col-md-1 text-right">field :</div>
-                <div class="col-xs-10 col-md-11">
-                  <div class="label label-primary">Field 1</div>
-                  <div class="label label-primary">Field 2</div>
-                  <div class="label label-primary">Field 3</div>
-                  <div class="label label-primary">Field 4</div>
-                  <div class="label label-primary">Field 5</div>
+            <div class="container-fluid">
+              <div id="comment-box-header" class="row"><span class="text-left"><strong>3 comments</strong></span><span class="pull-right comment-stats text-muted">Most liked</span><span class="pull-right comment-stats">Newest</span></div>
+              <div class="row comment-post">
+                <div class="comment-post-left pull-left"><img src="http://placehold.it/100x100" class="img-responsive img-circle center-block">
+                  <h6 class="text-center">Name</h6>
+                </div>
+                <div class="bubble left">
+                  <div class="comment-post-stats"><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span></div>
+                  <div class="comment-post-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
                 </div>
               </div>
-              <div class="panel-footer">11 people are working on this</div>
-            </div>
-            <div class="well well-sm col-md-11">
-              <h3 class="col-md-12">Task title</h3>
-              <div class="row task-header">
-                <div class="col-xs-2 col-md-1 text-right">field :</div>
-                <div class="col-xs-10 col-md-11">
-                  <div class="label label-primary">Field 1</div>
-                  <div class="label label-primary">Field 2</div>
-                  <div class="label label-primary">Field 3</div>
-                  <div class="label label-primary">Field 4</div>
-                  <div class="label label-primary">Field 5</div>
+              <div class="row comment-post">
+                <div class="comment-post-left pull-left"><img src="http://placehold.it/100x100" class="img-responsive img-circle center-block">
+                  <h6 class="text-center">Name</h6>
+                </div>
+                <div class="bubble left">
+                  <div class="comment-post-stats"><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span></div>
+                  <div class="comment-post-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
                 </div>
               </div>
-              <div class="panel-footer">10 people are working on this</div>
+              <div class="row comment-post">
+                <div class="comment-post-left pull-left"><img src="http://placehold.it/100x100" class="img-responsive img-circle center-block">
+                  <h6 class="text-center">Name</h6>
+                </div>
+                <div class="bubble left">
+                  <div class="comment-post-stats"><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span><span class="glyphicon glyphicon-heart pull-right"><span>999</span></span></div>
+                  <div class="comment-post-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div id="discussion" role="tabpanel" class="tab-pane">
-            <div class="row margin-top padding-bottom">
-              <button class="btn btn-default">New topic</button>
-            </div>
-            <div class="row">
-              <table class="table table-striped table-responsive">
-                <tr>
-                  <th class="title-col">Title</th>
-                  <th class="author-col">Author</th>
-                  <th class="created -col">Created</th>
-                  <th class="joined-col">Joined</th>
-                  <th class="view-col">View</th>
-                  <th class="post col">Post</th>
-                  <th class="last-active-col">Last activity</th>
-                </tr>
-                <tr>
-                  <td class="title-col">Task title</td>
-                  <td class="author-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive"></td>
-                  <td class="created -col">4h ago</td>
-                  <td class="joined-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"></td>
-                  <td class="view-col">99</td>
-                  <td class="post col">999</td>
-                  <td class="last-active-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline">
-                    <div class="inline">4h ago</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="title-col">Task title</td>
-                  <td class="author-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive"></td>
-                  <td class="created -col">2 days ago</td>
-                  <td class="joined-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"><img src="http://placehold.it/25x25" class="img-circle img-responsive img-inline"></td>
-                  <td class="view-col">88</td>
-                  <td class="post col">99</td>
-                  <td class="last-active-col"><img src="http://placehold.it/25x25" class="img-circle img-respons4ve img-inline">
-                    <div class="inline">8h ago</div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div id="collaborators" role="tabpanel" class="tab-pane"></div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -225,11 +185,23 @@
     <script src="js/bootstrap_3.36_min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script>
-      $(document).ready(function(){
+      $(document).ready(function(){ 
         $('.owl-carousel').owlCarousel({
           items : 4,
           itemsDesktop : [1199,3],
           itemsDesktopSmall : [979,3]
+        });
+      })
+    </script>
+    <script>
+      // for textarea auto-resize, bugs not fixed
+      $(document).ready(function(){
+        jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+          var offset = this.offsetHeight - this.clientHeight;
+          var resizeTextarea = function(el) {
+              jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+          };
+          jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
         });
       })
     </script>

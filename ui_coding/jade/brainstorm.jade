@@ -31,6 +31,8 @@ block body-content
           .col-xs-6.col-md-6
             .row 999
             .row View
+        .row.brainstorm-update-me-button
+          button.btn.btn-warning.center-block Update Me!
       .col-md-pull-2.col-md-10.image-gallery
         #image-gallery.carousel.slide(data-ride='carousel')
           .carousel-inner(role='listbox')
@@ -116,86 +118,57 @@ block body-content
                   span 999
 
           #comments.tab-pane(role='tabpanel')
-            button.btn.btn-success.margin-top-bottom Comment
-            .well.well-sm.col-md-11
-              .row.task-header
-                .text-left.col-md-12.inline.task-title Task title
-                  span.glyphicon.glyphicon-remove
-                .col-xs-2.col-md-1.text-right field :
-                .col-xs-10.col-md-8
-                  .label.label-primary Field 1
-                  .label.label-primary Field 2
-                  .label.label-primary Field 3
-                  .label.label-primary Field 4
-                  .label.label-primary Field 5
-              .panel-footer 9 people are working on this
-            .well.well-sm.col-md-11
-              h3.col-md-12 Task title
-              .row.task-header
-                .col-xs-2.col-md-1.text-right field :
-                .col-xs-10.col-md-11
-                  .label.label-primary Field 1
-                  .label.label-primary Field 2
-                  .label.label-primary Field 3
-                  .label.label-primary Field 4
-                  .label.label-primary Field 5
-              .panel-footer 11 people are working on this
-            .well.well-sm.col-md-11
-              h3.col-md-12 Task title
-              .row.task-header
-                .col-xs-2.col-md-1.text-right field :
-                .col-xs-10.col-md-11
-                  .label.label-primary Field 1
-                  .label.label-primary Field 2
-                  .label.label-primary Field 3
-                  .label.label-primary Field 4
-                  .label.label-primary Field 5
-              .panel-footer 10 people are working on this
-
-          #discussion.tab-pane(role='tabpanel')
-            .row.margin-top.padding-bottom
-              button.btn.btn-default New topic
-            .row
-              table.table.table-striped.table-responsive
-                tr
-                  th.title-col Title
-                  th.author-col Author
-                  th.created.-col Created
-                  th.joined-col Joined
-                  th.view-col View
-                  th.post.col Post
-                  th.last-active-col Last activity
-                tr
-                  td.title-col Task title
-                  td.author-col
-                    img.img-circle.img-responsive(src="http://placehold.it/25x25")
-                  td.created.-col 4h ago
-                  td.joined-col
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                  td.view-col 99
-                  td.post.col 999
-                  td.last-active-col
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    .inline 4h ago
-                tr
-                  td.title-col Task title
-                  td.author-col
-                    img.img-circle.img-responsive(src="http://placehold.it/25x25")
-                  td.created.-col 2 days ago
-                  td.joined-col
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                    img.img-circle.img-responsive.img-inline(src="http://placehold.it/25x25")
-                  td.view-col 88
-                  td.post.col 99
-                  td.last-active-col
-                    img.img-circle.img-respons4ve.img-inline(src="http://placehold.it/25x25")
-                    .inline 8h ago
-          #collaborators.tab-pane(role='tabpanel')
+            .container-fluid#comment-form
+              textarea.col-xs-12.col-md-8(type="text", placeholder="Comment here", rows="5", data-autoresize)
+              .col-md-4
+              button.btn.btn-success#submit-button(type="submit") Post
+            .container-fluid
+              .row#comment-box-header
+                span.text-left <strong>3 comments</strong>
+                span.pull-right.comment-stats.text-muted Most liked
+                span.pull-right.comment-stats Newest
+              .row.comment-post
+                .comment-post-left.pull-left
+                  img.img-responsive.img-circle.center-block(src="http://placehold.it/100x100")
+                  h6.text-center Name
+                .bubble.left
+                  .comment-post-stats
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                  .comment-post-content
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .row.comment-post
+                .comment-post-left.pull-left
+                  img.img-responsive.img-circle.center-block(src="http://placehold.it/100x100")
+                  h6.text-center Name
+                .bubble.left
+                  .comment-post-stats
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                  .comment-post-content
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .row.comment-post
+                .comment-post-left.pull-left
+                  img.img-responsive.img-circle.center-block(src="http://placehold.it/100x100")
+                  h6.text-center Name
+                .bubble.left
+                  .comment-post-stats
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                    span.glyphicon.glyphicon-heart.pull-right
+                      span 999
+                  .comment-post-content
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     .col-md-1
 
 
@@ -203,10 +176,21 @@ block body-content
 block script
   script(src="js/owl.carousel.min.js")
   script.
-    $(document).ready(function(){
+    $(document).ready(function(){ 
       $('.owl-carousel').owlCarousel({
         items : 4,
         itemsDesktop : [1199,3],
         itemsDesktopSmall : [979,3]
+      });
+    })
+  script.
+    // for textarea auto-resize, bugs not fixed
+    $(document).ready(function(){
+      jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+        var offset = this.offsetHeight - this.clientHeight;
+        var resizeTextarea = function(el) {
+            jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+        };
+        jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
       });
     })
