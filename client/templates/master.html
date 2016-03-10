@@ -12,25 +12,31 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li>
-						<!-- link to another page--><a href="{{pathFor route='explore'}}">Brainstorm</a>
+						<a href="{{pathFor route='explore'}}">Explore</a>
 					</li>
 					<li>
-						<!-- link to another page--><a href="{{pathFor route='explore'}}">Projects</a>
+						<a href="{{pathFor route='community'}}">Community</a>
 					</li>
 					<li>
-						<!-- link to another page--><a href="{{pathFor route='community'}}">Community</a>
-					</li>
-					<li>
-						<!-- link to another page--><a href="{{pathFor route='help'}}">Help</a>
+						<a href="{{pathFor route='help'}}">Help</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+				{{#if currentUser}}
 					<li>
-						<!-- add modal--><a href="#login">Login</a>
+						<a href="#"><p>{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</p></a>
 					</li>
 					<li>
-						<!-- add modal--><a href="#register">Register</a>
+						<a href="#"><button class="btn btn-default logout">Logout</button></a>
 					</li>
+				{{else}}
+					<li>
+						<a href="{{pathFor route='authentication'}}">Login</a>
+					</li>
+					<li>
+						<a href="{{pathFor route='authentication'}}">Register</a>
+					</li>
+				{{/if}}
 				</ul>
 			</div>
 		</div>

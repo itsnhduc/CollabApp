@@ -1,7 +1,7 @@
 <template name="explore">
 	<div class="container-fluid zero-margin zero-padding">
 		<div id="left-panel" class="col-md-2">
-			<button class="btn btn-primary center-block">New</button>
+			<a href="{{pathFor route='create-project'}}"><button class="btn btn-primary center-block">New</button></a>
 			<div id="category" class="row center-block">
 				<h5>Categories</h5>
 				<div class="input-group">
@@ -65,10 +65,13 @@
 			</div>
 			<div id="load-content" class="row">
 				{{#each projects}}
-					<div class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill"><img src="http://placehold.it/500x300" class="img-responsive">
+					<div href="project.html" class="col-xs-12 col-sm-6 col-md-3 zero-margin content-pill project">
+						<img src="http://placehold.it/500x300" class="img-responsive">
 						<div class="content-pill-title">{{title}}</div>
+						<div class="content-pill-author"><span><img src="http://placehold.it/20x20" class="img-circle"></span><span>&nbsp;&nbsp;&nbsp;{{author}}</span></div>
 						<div class="content-pill-description text-justify">{{description}}</div>
 						<div class="well zero-padding content-pill-footer">
+							<div class="label {{labelType}}">{{stage}}</div>
 							<div class="badge">
 								<span class="glyphicon glyphicon-eye-open"></span>
 								<span>{{views}}</span>
