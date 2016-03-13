@@ -1,0 +1,53 @@
+extends ../layout.jade
+
+block title
+  title New Project | CollabApp
+
+block body-content
+  .container-fluid
+    .col-md-2
+    .col-md-8
+      h3.text-center.create-project-header We need some details to get you started...
+    .col-md-2
+  .container-fluid
+    .col-md-2
+    .col-md-8.create-project-input-area
+      form.form-horizontal
+        h4.text-center Add Collaborators
+        .form-group.new-project-collaborators-line
+          label.col-xs-2.col-md-2.control-label(for="project-idea-creator") You
+          .col-xs-1.col-md-1
+          select.col-xs-5.col-md-5
+            option Desginers
+            option Manufacturers
+            option Sales Manager
+            option Self-defined
+          .col-xs-3.col-md-4
+            button.btn.btn-default.center-block Add
+        .form-group.new-project-collaborators-line
+          input.col-xs-2.col-md-2(type="text", placeholder="Username")
+          .col-xs-1.col-md-1
+          select.col-xs-5.col-md-5
+            option Desginers
+            option Manufacturers
+            option Sales Manager
+            option Self-defined
+          .col-xs-3.col-md-4
+            button.btn.btn-default.center-block Add
+        .form-group.new-project-collaborators-line
+          input.col-xs-2.col-md-2(type="text", placeholder="Username")
+          .col-xs-1.col-md-1
+          select.col-xs-5.col-md-5
+            option Desginers
+            option Manufacturers
+            option Sales Manager
+            option Self-defined
+          .col-xs-3.col-md-4
+            button.btn.btn-default.center-block Add
+      .container-fluid
+        .col-xs-4.col-md-4.text-left
+          button.btn.btn-default(onclick="location.href = 'new_project_page_1.html'") Prev
+        .col-xs-4.col-md-4
+        .col-xs-4.col-md-4.text-right
+          button.btn.btn-default(onclick="location.href = 'new_project_page_3.html'") Next
+    .col-md-2

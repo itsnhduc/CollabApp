@@ -1,0 +1,37 @@
+extends ../layout.jade
+
+block title
+  title New Project | CollabApp
+
+block body-content
+  .container-fluid
+    .col-md-2
+    .col-md-8
+      h3.text-center.create-project-header We need some details to get you started...
+    .col-md-2
+  .container-fluid
+    .col-md-2
+    .col-md-8.create-project-input-area
+      form
+        h4.text-center About Your Project
+        .form-group
+          label.input-labelling(for="project-title") Project Title
+          input.form-control#project-title(type="text")
+        .form-group
+          label.input-labelling(for="project-description") Project Description
+          input.form-control#project-description(type="text")
+        .form-group
+          label.input-labelling(for="image-upload") Images
+          button.btn.btn-default#image-upload Insert images
+          .panel.img-panel
+            img.img-responsive.new-project-img-inline(src="http://placehold.it/150x100")
+            img.img-responsive.new-project-img-inline(src="http://placehold.it/150x100")
+            img.img-responsive.new-project-img-inline(src="http://placehold.it/150x100")
+            img.img-responsive.new-project-img-inline(src="http://placehold.it/150x100")
+      .container-fluid
+        .col-xs-4.col-md-4.text-left
+          //button.btn.btn-default Prev
+        .col-xs-4.col-md-4
+        .col-xs-4.col-md-4.text-right
+          button.btn.btn-default(onclick="location.href = 'new_project_page_2.html'") Next
+    .col-md-2

@@ -1,0 +1,51 @@
+extends ../layout.jade
+
+block title
+  title New Project | CollabApp
+
+block body-content
+  .container-fluid
+    .col-md-2
+    .col-md-8
+      h3.text-center.create-project-header We need some details to get you started...
+    .col-md-2
+  .container-fluid
+    .col-md-2
+    .col-md-8.create-project-input-area
+      form.form-horizontal
+        h4.text-center Tasks
+        button.btn.btn-default Add task
+        .task-container
+          .well
+            a(data-toggle="modal", data-target="#new-project-task-1") Task title
+          .well
+            a(data-toggle="modal", data-target="#new-project-task-2") Task title 2
+          #new-project-task-1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel')
+            .modal-dialog.new-project-task-modal(role='document')
+              .modal-content
+                .modal-body
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  input#new-project-task-1-title.new-project-task-title.form-control(type='text', placeholder="Task title")
+                  textarea#new-project-task-1-description.new-project-task-description.form-control(placeholder="Task description")
+                .modal-footer
+                  button.btn.btn-default(type='button', data-dismiss='modal') Close
+                  button.btn.btn-primary(type='button') Save
+          #new-project-task-2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel')
+            .modal-dialog.new-project-task-modal(role='document')
+              .modal-content
+                .modal-body
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  input#new-project-task-2-title.new-project-task-title.form-control(type='text', placeholder="Task title")
+                  textarea#new-project-task-2-description.new-project-task-description.form-control(placeholder="Task description")
+                .modal-footer
+                  button.btn.btn-default(type='button', data-dismiss='modal') Close
+                  button.btn.btn-primary(type='button') Save
+      .container-fluid
+        .col-xs-4.col-md-4.text-left
+          button.btn.btn-default(onclick="location.href = 'new_project_page_2.html'") Prev
+        .col-xs-4.col-md-4
+        .col-xs-4.col-md-4.text-right
+          button.btn.btn-default(onclick="location.href = 'new_project_page_4.html'") Next
+    .col-md-2

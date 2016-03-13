@@ -281,3 +281,35 @@ body {
     display: inline-block;
     padding: 0px 2px;
 }
+/* create new project */
+.create-project-header {
+    padding: 10px 0px;
+    border-top: 2px solid #d3d3d3;
+    border-bottom: 2px solid #d3d3d3;
+}
+.create-project-input-area {
+    margin-top: 20px;
+}
+.input-labelling {
+    font-size: 16px;
+}
+.img-panel {
+    margin: 5px 0px;
+}
+.new-project-img-inline {
+    padding: 3px;
+    display: inline-block;
+    width: 100px;
+    max-width: 100px;
+}
+.new-project-collaborators-line {
+    height: 50px;
+    max-height: 50px;
+    vertical-align: middle;
+}
+.task-container {
+    margin: 10px;
+}
+.new-project-task-title, .new-project-task-description {
+    margin: 5px 5px 0px 5px;
+}
