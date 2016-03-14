@@ -3,46 +3,32 @@
 		<div class="create-project-input-area">
 			<form class="form-horizontal">
 				<h4 class="text-center">Add Collaborators</h4>
-				<div class="form-group new-project-collaborators-line">
-					<label for="project-idea-creator" class="col-xs-2 col-md-2 control-label">You</label>
-					<div class="col-xs-1 col-md-1"></div>
-					<select class="col-xs-5 col-md-5">
-						<option>Desginers</option>
-						<option>Manufacturers</option>
-						<option>Sales Manager</option>
-						<option>Self-defined</option>
-					</select>
-					<div class="col-xs-3 col-md-4">
-						<button class="btn btn-default center-block">Add</button>
-					</div>
+				<div class="spawn-area">
+					<!-- Dynamically add here {{> newCollaborator}} -->
+					{{#each collabs}}
+						{{> newCollaborator}}
+					{{/each}}
 				</div>
-				<div class="form-group new-project-collaborators-line">
-					<input type="text" placeholder="Username" class="col-xs-2 col-md-2">
-					<div class="col-xs-1 col-md-1"></div>
-					<select class="col-xs-5 col-md-5">
-						<option>Desginers</option>
-						<option>Manufacturers</option>
-						<option>Sales Manager</option>
-						<option>Self-defined</option>
-					</select>
-					<div class="col-xs-3 col-md-4">
-						<button class="btn btn-default center-block">Add</button>
-					</div>
-				</div>
-				<div class="form-group new-project-collaborators-line">
-					<input type="text" placeholder="Username" class="col-xs-2 col-md-2">
-					<div class="col-xs-1 col-md-1"></div>
-					<select class="col-xs-5 col-md-5">
-						<option>Desginers</option>
-						<option>Manufacturers</option>
-						<option>Sales Manager</option>
-						<option>Self-defined</option>
-					</select>
-					<div class="col-xs-3 col-md-4">
-						<button class="btn btn-default center-block">Add</button>
-					</div>
+				<div class="center-block">
+					<button class="btn btn-default center-block add-collab">Add</button>
 				</div>
 			</form>
+		</div>
+	</div>
+</template>
+
+<template name="newCollaborator">
+	<div class="form-group new-project-collaborators-line">
+		<input type="text" placeholder="Username" class="col-xs-2 col-md-2">
+		<div class="col-xs-1 col-md-1"></div>
+		<select class="col-xs-5 col-md-5">
+			<option>Designers</option>
+			<option>Manufacturers</option>
+			<option>Sales Manager</option>
+			<option>Self-defined</option>
+		</select>
+		<div class="col-xs-3 col-md-4">
+			<button class="btn btn-default center-block remove-collab">Remove</button>
 		</div>
 	</div>
 </template>

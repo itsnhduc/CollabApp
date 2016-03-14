@@ -3,6 +3,8 @@ if (Meteor.isClient) {
 	var maxStep;
 	var step;
 
+	Session.setDefault('collabs', [{_id: 1}])
+
 	Template.newProject.onRendered(function() {
 		maxStep = 4;
 		step = 1;
@@ -10,6 +12,34 @@ if (Meteor.isClient) {
 			$('.step' + i).hide();
 		}
 		$('.prev').hide();
+	});
+
+	Template.newProjectP2.helpers({
+		'collabs': function() {
+			// return collabs;
+			return Session.get('collabs');
+		}
+	});
+
+	Template.newProjectP2.events({
+		'click .add-collab': function(event) {
+			event.preventDefault();
+			var collabs = Session.get('collabs');
+			var nextId = collabs[collabs.length - 1]._id + 1;
+			collabs.push({
+				_id: nextId
+			});
+			Session.set('collabs', collabs);
+		},
+		'click .remove-collab': function(event) {
+			event.preventDefault();
+			var curId = this._id;
+			var collabs = Session.get('collabs');
+			collabs = $.grep(collabs, function(value) {
+				return value._id != curId;
+			});
+			Session.set('collabs', collabs);
+		}
 	});
 
 	Template.newProject.events({
@@ -24,10 +54,15 @@ if (Meteor.isClient) {
 				$('.next').hide();
 				
 				// save project info
+				// var title = $('#project-title').val();
+				// var description = $('#project-description').val();
+				// ---> image
+				// var collaborators = [];
+				// var tasks = [];
 
-				setTimeout(function(){
-					// Router.go('');
-				}, 3000);
+				// setTimeout(function(){
+				// 	Router.go('');
+				// }, 3000);
 			}
 			step++;
 		},
@@ -41,6 +76,6 @@ if (Meteor.isClient) {
 			step--;
 		},
 
-	})
+	});
 
 }
