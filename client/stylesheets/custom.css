@@ -1,289 +1,321 @@
 .project:hover {
-    cursor: pointer
+	cursor: pointer
 }
 
 
 /*  ----------------------------------------  */
 body {
-    /* fix content under navbar*/
-    padding-top: 60px;
+	/* fix content under navbar*/
+	padding-top: 60px;
 }
 .zero-margin {
-    margin: 0px;
+	margin: 0px;
 }
 .zero-padding {
-    padding: 0px;
+	padding: 0px;
 }
 /* index.html */
 #backdrop {
-    background: url("http://placehold.it/1349x600") center;
-    height: 600px;
+	background: url("http://placehold.it/1349x600") center;
+	height: 600px;
 }
 #slogan {
-    background: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    padding: 10px;
-    width: 700px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 70%;
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	padding: 10px;
+	width: 700px;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 70%;
 }
 #slogan h2, #slogan h4 {
-    color: #FFFFFF;
+	color: #FFFFFF;
 }
 #slogan-mobile {
-    display: none;
+	display: none;
 }
 @media (max-width: 992px) {
-    #backdrop {
-        height: 200px;
-    }
-    #slogan {
-        display: none;
-    }
-    #slogan-mobile {
-        border-radius: 5px;
-        display: block;
-        width: 100%;
-        position: absolute;
-        top: 265px;
-    }
+	#backdrop {
+		height: 200px;
+	}
+	#slogan {
+		display: none;
+	}
+	#slogan-mobile {
+		border-radius: 5px;
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 265px;
+	}
 }
 #featuring {
-    max-width: 1180px;
-    padding: 10px 20px;
+	max-width: 1180px;
+	padding: 10px 20px;
 }
 .row-padding {
-    padding: 10px 0px;
+	padding: 10px 0px;
 }
 #featuring-2 {
-    border-top: 2px solid #f3f3f3;
-    border-bottom: 2px solid #f3f3f3;
-    padding: 10px 0px;
-    margin-bottom: 10px;
-    max-height: 500px;
+	border-top: 2px solid #f3f3f3;
+	border-bottom: 2px solid #f3f3f3;
+	padding: 10px 0px;
+	margin-bottom: 10px;
+	max-height: 500px;
 }
 .img-connect-all {
-    max-height: 400px;
+	max-height: 400px;
 }
 #stats-row {
-    max-width: 900px;
+	max-width: 900px;
 }
 #stats-row .col-md-3:nth-child(even) {
-    border: none;
-    border-left: 3px solid #3f3f3f;
+	border: none;
+	border-left: 3px solid #3f3f3f;
 }
 #stats-row .col-md-3:nth-child(3) {
-        border: none;
-        border-left: 3px solid #3f3f3f;
-    }
+		border: none;
+		border-left: 3px solid #3f3f3f;
+	}
 @media (max-width: 992px) {
-    #stats-row {
-        max-width: 100%;
-    }
-    #stats-row .col-md-3:nth-child(3) {
-        border: none;
-        border-top: 3px solid #3f3f3f;
-    }
-    #stats-row .col-md-3:nth-child(even) {
-        border: none;
-        border-top: 3px solid #3f3f3f;
-    }
+	#stats-row {
+		max-width: 100%;
+	}
+	#stats-row .col-md-3:nth-child(3) {
+		border: none;
+		border-top: 3px solid #3f3f3f;
+	}
+	#stats-row .col-md-3:nth-child(even) {
+		border: none;
+		border-top: 3px solid #3f3f3f;
+	}
 }
 #footer {
-    border-top: 3px solid #d3d3d3;
-    margin-top: 10px;
-    padding-top: 10px;
-    background: #f3f3f3;
+	border-top: 3px solid #d3d3d3;
+	margin-top: 10px;
+	padding-top: 10px;
+	background: #f3f3f3;
 }
 /* explore.html */
 #left-panel {
-    padding: 20px 10px;
-    overflow-y: scroll;
+	padding: 20px 10px;
+	overflow-y: scroll;
 }
 #right-panel {
-    overflow-y: scroll;
+	overflow-y: scroll;
 }
 #category, #tags {
-    padding-top: 10px;
+	padding-top: 10px;
 }
 #category .list-group button, #tags .list-group button {
-    max-width: 80%;
+	max-width: 80%;
 }
 #sorting-row {
-    padding: 10px 5px;
+	padding: 10px 5px;
 }
 .content-pill {
-    margin: 3px 0px;
-    color: inherit;
-    text-decoration: none;
+	margin: 3px 0px;
+	color: inherit;
+	text-decoration: none;
 }
 .content-pill:hover, .content-pill:visited, .content-pill:focus {
-    color: inherit;
-    text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 .content-pill-title {
-    font-size: 24px;
+	font-size: 24px;
 }
 .content-pill-author {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 .content-pill-footer .label {
-    font-size: 12px;
-    vertical-align: middle;
-    padding: .2em .5em .3em;
+	font-size: 12px;
+	vertical-align: middle;
+	padding: .2em .5em .3em;
 }
 .content-pill-description {
-    font-size: 14px;
+	font-size: 14px;
 }
 .content-pill-footer {
-    padding: 5px 0px;
+	padding: 5px 0px;
 }
 /* idea page */
 .brainstorm-details {
-    padding: 5px 0px;
+	padding: 5px 0px;
 }
 .brainstorm-update-me-button {
-    margin: 10px 2px;
+	margin: 10px 2px;
 }
 .image-gallery {
-    height: 500px;
-    max-height: 500px;
+	height: 500px;
+	max-height: 500px;
 }
 .gallery-on-view {
-    height: 300px;
-    max-height: 300px;
+	height: 300px;
+	max-height: 300px;
 }
 .gallery-thumbnail {
-    padding: 5px 0px;
-    height: 300px;
-    max-height: 300px;
+	padding: 5px 0px;
+	height: 300px;
+	max-height: 300px;
 }
 .owl-carousel {
-    margin: 5px 0px;
+	margin: 5px 0px;
 }
 .owl-carousel img {
-    padding: 0px 5px;
+	padding: 0px 5px;
 }
 .owl-carousel img:hover {
-    border: 1px solid #000000;
+	border: 1px solid #000000;
 }
 #ideas {
-    padding: 10px 0px;
+	padding: 10px 0px;
 }
 .margin-top-bottom {
-    margin: 10px 0px;
+	margin: 10px 0px;
 }
 #comment-form {
-    margin: 15px;
+	margin: 15px;
 }
 #submit-button {
-    margin: 10px;
+	margin: 10px;
 }
 #comment-box-header {
-    margin: 10px 0px;
-    border-bottom: 2px solid #000000;
-    font-size: 20px;
+	margin: 10px 0px;
+	border-bottom: 2px solid #000000;
+	font-size: 20px;
 }
 .comment-post-left {
-    width: 150px;
-    max-width: 150px;
-    display: inline-block;
+	width: 150px;
+	max-width: 150px;
+	display: inline-block;
 }
 .comment-stats {
-    padding: 0px 10px;
+	padding: 0px 10px;
 }
 .comment-post {
-    padding: 5px 2px;
+	padding: 5px 2px;
 }
 .comment-post-stats {
-    padding: 5px 2px;
+	padding: 5px 2px;
 }
 .comment-post-content {
-    padding: 5px 2px;
+	padding: 5px 2px;
 }
 /* creating bubble */
 .bubble {
-    width: 600px;
-    max-width: 600px;
-    background-color: #F2F2F2;
-    border-radius: 5px;
-    box-shadow: 0 0 6px #B2B2B2;
-    display: inline-block;
-    padding: 10px 18px;
-    position: relative;
-    vertical-align: top;
+	width: 600px;
+	max-width: 600px;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	box-shadow: 0 0 6px #B2B2B2;
+	display: inline-block;
+	padding: 10px 18px;
+	position: relative;
+	vertical-align: top;
 }
 .bubble::before {
-    background-color: #F2F2F2;
-    content: "\00a0";
-    display: block;
-    height: 16px;
-    position: absolute;
-    top: 11px;
-    transform:             rotate( 29deg ) skew( -35deg );
-        -moz-transform:    rotate( 29deg ) skew( -35deg );
-        -ms-transform:     rotate( 29deg ) skew( -35deg );
-        -o-transform:      rotate( 29deg ) skew( -35deg );
-        -webkit-transform: rotate( 29deg ) skew( -35deg );
-    width:  20px;
+	background-color: #F2F2F2;
+	content: "\00a0";
+	display: block;
+	height: 16px;
+	position: absolute;
+	top: 11px;
+	transform:			 rotate( 29deg ) skew( -35deg );
+		-moz-transform:	rotate( 29deg ) skew( -35deg );
+		-ms-transform:	 rotate( 29deg ) skew( -35deg );
+		-o-transform:	  rotate( 29deg ) skew( -35deg );
+		-webkit-transform: rotate( 29deg ) skew( -35deg );
+	width:  20px;
 }
 .left {
-    float: left;   
-    margin: 5px 45px 5px 20px;         
+	float: left;   
+	margin: 5px 45px 5px 20px;		 
 }
 .left::before {
-    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
-    left: -9px;           
+	box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+	left: -9px;		   
 }
 /* project.html */
 .project-team-members {
-    padding: 5px 0px;
+	padding: 5px 0px;
 }
 .project-team-members-view-all {
-    margin: 8px 2px;
+	margin: 8px 2px;
 }
 .project-user-options {
-    border-top: 3px solid #d3d3d3;
-    border-bottom: 3px solid #d3d3d3;
+	border-top: 3px solid #d3d3d3;
+	border-bottom: 3px solid #d3d3d3;
 }
 .project-update-me-button, .project-join-now-button {
-    margin: 10px 2px;
+	margin: 10px 2px;
 }
 #dashboard, #project-tasks, #project-discussion {
-    padding: 8px 2px;
+	padding: 8px 2px;
 }
 .project-discussion-new-topic {
-    padding: 10px 0px;
+	padding: 10px 0px;
 }
 #project-discussion-list {
-    margin: 5px 0px;
+	margin: 5px 0px;
 }
 .title-col {
-    width: 27%;
+	width: 27%;
 }
 .author-col {
-    width: 10%;
+	width: 10%;
 }
 .created-col {
-    width: 10%;
+	width: 10%;
 }
 .joined-col {
-    width: 20%;
+	width: 20%;
 }
 .post-col {
-    width: 8%;
+	width: 8%;
 }
 .view-col {
-    width: 8%;
+	width: 8%;
 }
 .last-active-col {
-    width: 17%;
+	width: 17%;
 }
 .project-discussion-img-inline {
-    max-width: 40px;
-    display: inline-block;
-    padding: 0px 2px;
+	max-width: 40px;
+	display: inline-block;
+	padding: 0px 2px;
+}
+/* create new project */
+.create-project-header {
+	padding: 10px 0px;
+	border-top: 2px solid #d3d3d3;
+	border-bottom: 2px solid #d3d3d3;
+}
+.create-project-input-area {
+	margin-top: 20px;
+}
+.input-labelling {
+	font-size: 16px;
+}
+.img-panel {
+	margin: 5px 0px;
+}
+.new-project-img-inline {
+	padding: 3px;
+	display: inline-block;
+	width: 100px;
+	max-width: 100px;
+}
+.new-project-collaborators-line {
+	height: 50px;
+	max-height: 50px;
+	vertical-align: middle;
+}
+.task-container {
+	margin: 10px;
+}
+.new-project-task-title, .new-project-task-description {
+	margin: 5px 5px 0px 5px;
 }

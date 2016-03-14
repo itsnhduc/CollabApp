@@ -1,0 +1,44 @@
+<template name="newProjectP3">
+	<div class="container-fluid">
+		<div class="create-project-input-area">
+			<form class="form-horizontal">
+				<h4 class="text-center">Tasks</h4>
+				<button class="btn btn-default">Add task</button>
+				<div class="task-container">
+					<div class="well"><a data-toggle="modal" data-target="#new-project-task-1">Task title</a></div>
+					<div class="well"><a data-toggle="modal" data-target="#new-project-task-2">Task title 2</a></div>
+					<div id="new-project-task-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade">
+						<div role="document" class="modal-dialog new-project-task-modal">
+							<div class="modal-content">
+								<div class="modal-body">
+									<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&#x00D7;</span></button>
+									<input id="new-project-task-1-title" type="text" placeholder="Task title" class="new-project-task-title form-control">
+									<textarea id="new-project-task-1-description" placeholder="Task description" class="new-project-task-description form-control"></textarea>
+								</div>
+								<div class="modal-footer">
+									<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+									<button type="button" class="btn btn-primary">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="new-project-task-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade">
+						<div role="document" class="modal-dialog new-project-task-modal">
+							<div class="modal-content">
+								<div class="modal-body">
+									<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&#x00D7;</span></button>
+									<input id="new-project-task-2-title" type="text" placeholder="Task title" class="new-project-task-title form-control">
+									<textarea id="new-project-task-2-description" placeholder="Task description" class="new-project-task-description form-control"></textarea>
+								</div>
+								<div class="modal-footer">
+									<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+									<button type="button" class="btn btn-primary">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+    </div>
+</template>
