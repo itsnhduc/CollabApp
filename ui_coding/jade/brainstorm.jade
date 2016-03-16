@@ -14,21 +14,21 @@ block body-content
       h3 Title
       .col-md-push-10.col-md-2
         .row.brainstorm-details
-          .col-xs-6.col-md-6
+          .col-xs-3.col-md-6
             img.img-circle.img-responsive(src='http://placehold.it/50x50')
-          .col-xs-6.col-md-6
+          .col-xs-9.col-md-6
             .row Name
             .row Author
         .row.brainstorm-details
-          .col-xs-6.col-md-6
+          .col-xs-3.col-md-6
             img.img-circle.img-responsive(src='http://placehold.it/50x50')
-          .col-xs-6.col-md-6
+          .col-xs-9.col-md-6
             .row 999
             .row Post Date
         .row.brainstorm-details
-          .col-xs-6.col-md-6
+          .col-xs-3.col-md-6
             img.img-circle.img-responsive(src='http://placehold.it/50x50')
-          .col-xs-6.col-md-6
+          .col-xs-9.col-md-6
             .row 999
             .row View
         .row.brainstorm-update-me-button
@@ -38,10 +38,14 @@ block body-content
           .carousel-inner(role='listbox')
             .item.active
               img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
-          a.left.carousel-control(href='#image-gallery', role='button', data-slide='prev')
+            .item
+              img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
+            .item
+              img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
+          a.left.carousel-control(role='button', href="#image-gallery", data-slide='prev')
             span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
             span.sr-only Previous
-          a.right.carousel-control(href='#image-gallery', role='button', data-slide='next')
+          a.right.carousel-control(role='button', href="#image-gallery", data-slide='next')
             span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
             span.sr-only Next
         .owl-carousel
@@ -79,7 +83,7 @@ block body-content
               .well.zero-padding.content-pill-footer
                 .label.label-default
                   span.glyphicon.glyphicon-heart
-                  span 999
+                  span &nbsp;999
             a.col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill(href="#")
               img.img-responsive(src="http://placehold.it/500x300")
               .content-pill-title Title
@@ -91,7 +95,7 @@ block body-content
               .well.zero-padding.content-pill-footer
                 .label.label-default
                   span.glyphicon.glyphicon-heart
-                  span 999
+                  span &nbsp;999
             a.col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill(href="#")
               img.img-responsive(src="http://placehold.it/500x300")
               .content-pill-title Title
@@ -103,7 +107,7 @@ block body-content
               .well.zero-padding.content-pill-footer
                 .label.label-default
                   span.glyphicon.glyphicon-heart
-                  span 999
+                  span &nbsp;999
             a.col-xs-12.col-sm-6.col-md-3.zero-margin.content-pill(href="#")
               img.img-responsive(src="http://placehold.it/500x300")
               .content-pill-title Title
@@ -115,14 +119,14 @@ block body-content
               .well.zero-padding.content-pill-footer
                 .label.label-default
                   span.glyphicon.glyphicon-heart
-                  span 999
+                  span &nbsp;999
 
           #comments.tab-pane(role='tabpanel')
-            .container-fluid#comment-form
+            .container-fluid.zero-margin#comment-form
               textarea.col-xs-12.col-md-8(type="text", placeholder="Comment here", rows="5", data-autoresize)
               .col-md-4
               button.btn.btn-success#submit-button(type="submit") Post
-            .container-fluid
+            .container-fluid.zero-margin
               .row#comment-box-header
                 span.text-left <strong>3 comments</strong>
                 span.pull-right.comment-stats.text-muted Most liked
@@ -132,13 +136,16 @@ block body-content
                   img.img-responsive.img-circle.center-block(src="http://placehold.it/100x100")
                   h6.text-center Name
                 .bubble.left
-                  .comment-post-stats
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
+                  .comment-bubble-header
+                    .comment-post-stats.comment-post-profile-pic
+                      img.img-responsive.img-circle.brainstorm-comment-img-inline(src="http://placehold.it/20x20")
+                      span &nbsp;Name
+                    .comment-post-stats.pull-right
+                      span.glyphicon.glyphicon-thumbs-up
+                      span &nbsp;999
+                    .comment-post-stats.pull-right
+                      span.glyphicon.glyphicon-time
+                      span &nbsp;999
                   .comment-post-content
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               .row.comment-post
@@ -146,13 +153,15 @@ block body-content
                   img.img-responsive.img-circle.center-block(src="http://placehold.it/100x100")
                   h6.text-center Name
                 .bubble.left
-                  .comment-post-stats
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
+                  .comment-post-stats.comment-post-profile-pic
+                      img.img-responsive.img-circle.brainstorm-comment-img-inline(src="http://placehold.it/20x20")
+                      span &nbsp;Name
+                  .comment-post-stats.pull-right
+                    span.glyphicon.glyphicon-thumbs-up
+                    span &nbsp;999
+                  .comment-post-stats.pull-right
+                    span.glyphicon.glyphicon-time
+                    span &nbsp;999
                   .comment-post-content
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               .row.comment-post
@@ -160,13 +169,15 @@ block body-content
                   img.img-responsive.img-circle.center-block(src="http://placehold.it/100x100")
                   h6.text-center Name
                 .bubble.left
-                  .comment-post-stats
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
-                    span.glyphicon.glyphicon-heart.pull-right
-                      span 999
+                  .comment-post-stats.comment-post-profile-pic
+                      img.img-responsive.img-circle.brainstorm-comment-img-inline(src="http://placehold.it/20x20")
+                      span &nbsp;Name
+                  .comment-post-stats.pull-right
+                    span.glyphicon.glyphicon-thumbs-up
+                    span &nbsp;999
+                  .comment-post-stats.pull-right
+                    span.glyphicon.glyphicon-time
+                    span &nbsp;999
                   .comment-post-content
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     .col-md-1
@@ -182,6 +193,15 @@ block script
         itemsDesktop : [1199,3],
         itemsDesktopSmall : [979,3]
       });
+      if (screen.width < 992) {
+        $('.owl-carousel').hide();
+        $('.comment-post-left').hide();
+        $('.comment-post-profile-pic').show();
+      } else {
+        $('.owl-carousel').show();
+        $('.comment-post-left').show();
+        $('.comment-post-profile-pic').hide();
+      };
     })
   script.
     // for textarea auto-resize, bugs not fixed

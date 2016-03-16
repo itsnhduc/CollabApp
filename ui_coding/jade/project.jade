@@ -18,7 +18,7 @@ block body-content
         .col-xs-6.col-md-6
           img.img-circle.img-responsive(src='http://placehold.it/50x50')
         .col-xs-6.col-md-6
-          .row NName
+          .row Name
           .row Designation
       .row.project-team-members
         .col-xs-6.col-md-6
@@ -41,22 +41,26 @@ block body-content
           button.btn.btn-success.center-block I want to join
     .col-md-pull-2.col-md-10.image-gallery
       #image-gallery.carousel.slide(data-ride='carousel')
-        .carousel-inner(role='listbox')
-          .item.active
-            img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
-        a.left.carousel-control(href='#image-gallery', role='button', data-slide='prev')
-          span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-          span.sr-only Previous
-        a.right.carousel-control(href='#image-gallery', role='button', data-slide='next')
-          span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-          span.sr-only Next
-      .owl-carousel
-        img.img-responsive(src='http://placehold.it/1000x700')
-        img.img-responsive(src='http://placehold.it/1000x700')
-        img.img-responsive(src='http://placehold.it/1000x700')
-        img.img-responsive(src='http://placehold.it/1000x700')
-        img.img-responsive(src='http://placehold.it/1000x700')
-        img.img-responsive(src='http://placehold.it/1000x700')
+          .carousel-inner(role='listbox')
+            .item.active
+              img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
+            .item
+              img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
+            .item
+              img.img-responsive.center-block.gallery-thumbnail(src='http://placehold.it/1000x700')
+          a.left.carousel-control(role='button', href="#image-gallery", data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+            span.sr-only Previous
+          a.right.carousel-control(role='button', href="#image-gallery", data-slide='next')
+            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+            span.sr-only Next
+        .owl-carousel
+          img.img-responsive(src='http://placehold.it/1000x700')
+          img.img-responsive(src='http://placehold.it/1000x700')
+          img.img-responsive(src='http://placehold.it/1000x700')
+          img.img-responsive(src='http://placehold.it/1000x700')
+          img.img-responsive(src='http://placehold.it/1000x700')
+          img.img-responsive(src='http://placehold.it/1000x700')
     h6.text-justify.col-md-10 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium orci nec libero accumsan, nec gravida nisi viverra. Cras porttitor non felis et fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce pretium molestie nibh vestibulum lacinia. Phasellus id nibh eu orci mollis porta. Integer tempor eros elit, eu sagittis magna efficitur a. Suspendisse at lobortis libero. Maecenas sed orci fermentum, finibus enim sit amet, aliquam ipsum. Maecenas efficitur gravida lorem in tempus. Vivamus mattis, velit ac mattis ultrices, nunc magna placerat magna, vel laoreet arcu quam faucibus nisl. Proin et nulla accumsan, commodo urna eu, viverra est. Phasellus vulputate risus in odio tincidunt, sit amet facilisis lacus sollicitudin. Etiam nisl massa, efficitur vel dui eu, euismod volutpat lacus. Donec aliquet egestas purus, auctor lacinia ipsum. Nullam a tellus non nulla fermentum pellentesque sed id dui.
   .col-md-1
 
@@ -70,7 +74,7 @@ block body-content
           li(role='presentation')
             a(href='#project-tasks', aria-controls='tasks', role='tab', data-toggle='tab') Tasks
           li(role='presentation')
-            a(href='#project-discussion', aria-controls='discussion', role='tab', data-toggle='tab') Discussion
+            a(href='#project-discussion', aria-controls='discussion', role='tab', data-toggle='tab') Discussions
         // Tab panes
         .tab-content
           #dashboard.tab-pane.active(role='tabpanel')
@@ -94,7 +98,7 @@ block body-content
                     li Updates 3
 
           #project-tasks.tab-pane(role='tabpanel')
-            .well.well-sm.col-md-11
+            .well.well-sm.col-md-11(onclick="location.href = 'project_task.html'")
               h4.col-md-12 Task title
               .row.task-header
                 .col-xs-2.col-md-1.text-right Fields:
@@ -105,7 +109,7 @@ block body-content
                   .label.label-primary Field 4
                   .label.label-primary Field 5
               .panel-footer 9 people are working on this
-            .well.well-sm.col-md-11
+            .well.well-sm.col-md-11(onclick="location.href = 'project_task.html'")
               h4.col-md-12 Task title
               .row.task-header
                 .col-xs-2.col-md-1.text-right Fields:
@@ -116,7 +120,7 @@ block body-content
                   .label.label-primary Field 4
                   .label.label-primary Field 5
               .panel-footer 11 people are working on this
-            .well.well-sm.col-md-11
+            .well.well-sm.col-md-11(onclick="location.href = 'project_task.html'")
               h4.col-md-12 Task title
               .row.task-header
                 .col-xs-2.col-md-1.text-right Fields:
@@ -141,7 +145,7 @@ block body-content
                   th.view-col View
                   th.post.col Post
                   th.last-active-col Last activity
-                tr
+                tr(onclick="location.href = 'project_discussion.html'")
                   td.title-col Task title
                   td.author-col
                     img.img-circle.img-responsive(src="http://placehold.it/25x25")
@@ -156,7 +160,7 @@ block body-content
                     span
                       img.img-circle.img-responsive.project-discussion-img-inline(src="http://placehold.it/25x25")
                     span &nbsp;4h ago
-                tr
+                tr(onclick="location.href = 'project_discussion.html'")
                   td.title-col Task title
                   td.author-col
                     img.img-circle.img-responsive(src="http://placehold.it/25x25")
@@ -184,4 +188,9 @@ block script
         itemsDesktop : [1199,3],
         itemsDesktopSmall : [979,3]
       });
+      if (screen.width < 992) {
+        $('.owl-carousel').hide();
+      } else {
+        $('.owl-carousel').show();
+      };
     })

@@ -143,12 +143,15 @@ body {
     margin: 10px 2px;
 }
 .image-gallery {
-    height: 500px;
     max-height: 500px;
 }
-.gallery-on-view {
-    height: 300px;
-    max-height: 300px;
+@media (max-width: 992px) {
+    .image-gallery {
+        margin-bottom: 25px;
+    }
+}
+#image-gallery a {
+    margin: 0px;
 }
 .gallery-thumbnail {
     padding: 5px 0px;
@@ -171,7 +174,7 @@ body {
     margin: 10px 0px;
 }
 #comment-form {
-    margin: 15px;
+    padding: 15px;
 }
 #submit-button {
     margin: 10px;
@@ -179,7 +182,18 @@ body {
 #comment-box-header {
     margin: 10px 0px;
     border-bottom: 2px solid #000000;
-    font-size: 20px;
+   font-size: 20px;
+}
+@media (max-width: 992px) {
+    #comment-box-header {
+        font-size: 16px;
+    }
+}
+.comment-bubble-header {
+    padding: 0px 1px;
+}
+.brainstorm-comment-img-inline {
+    display: inline-block;
 }
 .comment-post-left {
     width: 150px;
@@ -193,6 +207,7 @@ body {
     padding: 5px 2px;
 }
 .comment-post-stats {
+    display: inline-block;
     padding: 5px 2px;
 }
 .comment-post-content {
@@ -200,7 +215,7 @@ body {
 }
 /* creating bubble */
 .bubble {
-    width: 600px;
+    width: 95%;
     max-width: 600px;
     background-color: #F2F2F2;
     border-radius: 5px;
@@ -226,7 +241,7 @@ body {
 }
 .left {
     float: left;   
-    margin: 5px 45px 5px 20px;         
+    margin: 5px 0px 5px 10px;         
 }
 .left::before {
     box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
@@ -312,4 +327,43 @@ body {
 }
 .new-project-task-title, .new-project-task-description {
     margin: 5px 5px 0px 5px;
+}
+/* project discussion page */
+.project-discussion-img-inline {
+    margin-right: 5px;
+    display: inline-block;
+}
+.project-discussion-stats {
+    font-size: 16px;
+}
+/* project task page */
+.project-task-stats {
+    font-size: 16px;
+}
+.task-container {
+    padding: 5px 0px;
+}
+.task-pill {
+    margin: 3px 4px;
+    padding: 8px 4px;
+}
+@media (max-width: 992px) {
+    .task-pill {
+        padding: 4px;
+        margin: 4px 0px;
+    }
+    .task-container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+.project-task-content {
+    padding: 0px 5px;
+}
+.project-task-img-inline {
+    margin: 0px 5px;
+    display: inline-block;
+}
+.task-pill-profile-pic {
+    padding-top: 8px;
 }
