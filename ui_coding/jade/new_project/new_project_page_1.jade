@@ -1,7 +1,7 @@
 extends ../layout.jade
 
 block title
-  title New Project | CollabApp
+  title New | CollabApp
 
 block body-content
   .container-fluid
@@ -13,13 +13,30 @@ block body-content
     .col-md-2
     .col-md-8.create-project-input-area
       form
-        h4.text-center About Your Project
         .form-group
-          label.input-labelling(for="project-title") Project Title
+          label.input-labelling It is a
+          .radio-inline
+            label
+              input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+              | Brainstorm
+          .radio-inline
+            label
+              input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+              | Project
+        .form-group
+          label.input-labelling(for='categories') Categories
+          select#categories.form-control
+            option Category 1
+            option Category 2
+            option Category 3
+            option Category 4
+            option Category 5
+        .form-group
+          label.input-labelling(for="project-title") Title
           input.form-control#project-title(type="text")
         .form-group
-          label.input-labelling(for="project-description") Project Description
-          input.form-control#project-description(type="text")
+          label.input-labelling(for="project-description") Description
+          textarea.form-control#project-description(type="text", rows="3")
         .form-group
           label.input-labelling(for="image-upload") Images
           button.btn.btn-default#image-upload Insert images
