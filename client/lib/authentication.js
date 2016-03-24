@@ -3,9 +3,9 @@ if (Meteor.isClient) {
 	Template.authentication.events({
 		'click .login-submit': function(event) {
 			event.preventDefault();
-			var email = $('.login-email').val();
+			var username = $('.login-username').val();
 			var password = $('.login-password').val();
-			Meteor.loginWithPassword(email, password, function(err) {
+			Meteor.loginWithPassword(username, password, function(err) {
 				if (err) {
 					$('.login-alert').text(err.reason);
 					$('.login-alert').removeClass('hidden');
@@ -20,11 +20,13 @@ if (Meteor.isClient) {
 			var firstName = $('.register-firstname').val();
 			var lastName = $('.register-lastname').val();
 			var email = $('.register-email').val();
+			var username = $('.register-username').val();
 			var password = $('.register-password').val();
 			var reentPassword = $('.register-reentpassword').val();
 			if (password == reentPassword) {
 				Accounts.createUser({
 					email: email,
+					username: username,
 					password: password,
 					profile: {
 						firstName: firstName,

@@ -3,7 +3,7 @@
 		<div class="create-project-input-area">
 			<form class="form-horizontal">
 				<h4 class="text-center">Add Collaborators</h4>
-				<div class="spawn-area">
+				<div class="collab-container">
 					<!-- Dynamically add here {{> newCollaborator}} -->
 					{{#each collabs}}
 						{{> newCollaborator}}
@@ -18,14 +18,17 @@
 </template>
 
 <template name="newCollaborator">
-	<div class="form-group new-project-collaborators-line">
-		<input type="text" placeholder="Username" class="col-xs-2 col-md-2">
-		<div class="col-xs-1 col-md-1"></div>
-		<select class="col-xs-5 col-md-5">
-			<option>Designers</option>
-			<option>Manufacturers</option>
+	<div class="form-group individual-collab">
+		<input type="text" placeholder="Username" class="col-xs-2 col-md-2 text-center collab-name">
+		<select class="col-xs-5 col-md-5 col-xs-offset-1 col-md-offset-1 collab-role">
+			<option>Brainstormer</option>
+			<option>Designer</option>
+			<option>Supplier</option>
+			<option>Manufacturer</option>
+			<option>Tester</option>
 			<option>Sales Manager</option>
-			<option>Self-defined</option>
+			<option>Marketing Manager</option>
+			<option>Other</option>
 		</select>
 		<div class="col-xs-3 col-md-4">
 			<button class="btn btn-default center-block remove-collab">Remove</button>

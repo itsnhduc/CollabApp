@@ -26,6 +26,14 @@ if (Meteor.isClient) {
 			} else {
 				console.log('Error');
 			}
+		},
+		'click #new': function(event) {
+			event.preventDefault();
+			if (Meteor.user()) {
+				Router.go('/new-project');
+			} else {
+				Router.go('/authentication');
+			}
 		}
 	});
 

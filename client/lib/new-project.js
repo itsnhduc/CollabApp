@@ -1,22 +1,18 @@
 if (Meteor.isClient) {
-
+	
 	var maxStep;
 	var step;
 
+	// >>>>>>>>>> STEP 2
 	Session.setDefault('collabs', [{_id: 1}])
 
-	Template.newProject.onRendered(function() {
-		maxStep = 4;
-		step = 1;
-		for (var i = 2; i <= maxStep; i++) {
-			$('.step' + i).hide();
-		}
-		$('.prev').hide();
+	Template.newProjectP2.onRendered(function() {
+		$('.collab-name').first().val('You');
+		$('.collab-name').first().attr('disabled', 'disabled');
 	});
 
 	Template.newProjectP2.helpers({
 		'collabs': function() {
-			// return collabs;
 			return Session.get('collabs');
 		}
 	});
@@ -41,6 +37,53 @@ if (Meteor.isClient) {
 			Session.set('collabs', collabs);
 		}
 	});
+	// >>>>>>>>>> /STEP 2
+
+	// >>>>>>>>>> STEP 3
+	Session.setDefault('tasks', [{_id: 1}]);
+
+	Template.newProjectP3.helpers({
+		'tasks': function() {
+			return Session.get('tasks');
+		}
+	});
+
+	Template.newProjectP3.events({
+		'click .add-task': function(event) {
+			event.preventDefault();
+			var tasks = Session.get('tasks');
+			var nextId = tasks[tasks.length - 1]._id + 1;
+			tasks.push({
+				_id: nextId
+			});
+			Session.set('tasks', tasks);
+		},
+		'click .remove-task': function(event) {
+			event.preventDefault();
+			var curId = this._id;
+			var tasks = Session.get('tasks');
+			tasks = $.grep(tasks, function(value) {
+				return value._id != curId;
+			});
+			Session.set('tasks', tasks);
+		},
+		'click .save-task': function(event) {
+			var taskTitle = $('#new-project-task-' + this._id).find('#task-title').val();
+			$('#task-' + this._id).find('.title').text(taskTitle);
+			$('#new-project-task-' + this._id).modal('toggle');
+		}
+	});
+
+	// >>>>>>>>>> /STEP 3
+
+	Template.newProject.onRendered(function() {
+		maxStep = 4;
+		step = 1;
+		for (var i = 2; i <= maxStep; i++) {
+			$('.step' + i).hide();
+		}
+		$('.prev').hide();
+	});
 
 	Template.newProject.events({
 		'click .next': function(event) {
@@ -53,16 +96,72 @@ if (Meteor.isClient) {
 				$('.prev').hide();
 				$('.next').hide();
 				
-				// save project info
-				// var title = $('#project-title').val();
-				// var description = $('#project-description').val();
-				// ---> image
-				// var collaborators = [];
-				// var tasks = [];
+				// Save project info
+				var title = $('#project-title').val();
+				var description = $('#project-description').val();
+				var projectId;
 
-				// setTimeout(function(){
-				// 	Router.go('');
-				// }, 3000);
+				Projects.insert({
+					title: title,
+					description: description,
+					author: Meteor.user().username,
+					stage: 'project',
+					stats: {
+						views: 0,
+						stars: 0,
+					},
+					// category: category,
+					// tags: [],
+					createdAt: new Date()
+				}, function (err, _id) {
+					 saveCollaborators(_id);
+					 saveTasks(_id);
+					 Router.go('/project/' + _id)
+				});
+
+				// ---> image
+
+				var saveCollaborators = function (_id) {
+					var collabs = [];
+					var collabPool = $('.individual-collab');
+					var nameList = collabPool.find('.collab-name');
+					var roleList = collabPool.find('.collab-role');
+
+					for (var i = 0; i < collabPool.length; i++) {
+						var username = nameList[i].value;
+						if (username == 'You') {
+							username = Meteor.user().username;
+						}
+						collabs.push({
+							username: username,
+							role: roleList[i].value
+						});
+					}
+
+					Collabs.insert({
+						projectId: _id,
+						collabs: collabs
+					});
+				}
+
+				var saveTasks = function(_id) {
+					var tasks = []
+					var taskPool = $('.modal');
+					var titleList = taskPool.find('#task-title');
+					var descriptionList = taskPool.find('#task-description');
+					
+					for (var i = 0; i < taskPool.length; i++) {
+						tasks.push({
+							title: titleList[i].value,
+							description: descriptionList[i].value
+						});
+					}
+
+					Tasks.insert({
+						projectId: _id,
+						tasks: tasks
+					});
+				}
 			}
 			step++;
 		},

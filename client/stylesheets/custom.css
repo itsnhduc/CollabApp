@@ -1,5 +1,12 @@
-.project:hover {
-	cursor: pointer
+.collab-name[disabled=disabled] {
+	background-color: rgb(255, 255, 255);
+}
+.clickable {
+	cursor: pointer;
+}
+.liked {
+	color: #3B5998;
+	font-weight: bolder;
 }
 
 

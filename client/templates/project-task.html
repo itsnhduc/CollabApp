@@ -1,0 +1,52 @@
+<template name="projectTask">
+	<div class="container-fluid">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 zero-padding">
+			<ol class="breadcrumb">
+				<li><a href="project.html">{{projectTitle}}</a></li>
+				<li class="active">Task #{{_id}}</li>
+			</ol>
+			<div class="col-md-push-9 col-md-3">
+				<div class="project-task-stats">9 solutions</div>
+				<div class="project-task-stats"><span class="glyphicon glyphicon-user"></span><span>&nbsp;&nbsp;99</span></div>
+				<div class="project-task-stats"><span class="glyphicon glyphicon-hourglass"></span><span>&nbsp;&nbsp;2 weeks from deadline</span></div>
+				<div class="project-task-stats"></div>
+			</div>
+			<div class="col-md-pull-3 col-md-9">
+				<h4 id="project-task-title">{{title}}</h4>
+				<h6 id="project-task-title" class="text-justify">{{description}}</h6>
+			</div>
+			<div class="container-fluid">
+				<h4>Solutions</h4>
+				<form id="new-solution">
+					<div class="form-group">
+						<textarea id="solution" class="form-control" placeholder="What's on your mind?"></textarea>
+					</div>
+					<div class="form-group">
+						<button id="submit-solution" class="btn btn-success">Submit</button>
+					</div>
+				</form>
+				<div class="container-fluid task-container">
+					{{#each solutions}}
+					<div class="panel col-xs-12 col-md-5 task-pill">
+						<div class="col-xs-3 col-md-2 task-pill-profile-pic"><img src="http://placehold.it/50x50" class="img-circle img-responsive center-block">
+							<h6 class="text-center">{{collabName}}</h6>
+						</div>
+						<div class="col-xs-9 col-md-10">
+							<div class="row">
+								<h6 class="text-justify project-task-content">{{text}}</h6>
+							</div>
+							<div class="row">
+								<span class="like clickable">
+									<span class="glyphicon glyphicon-thumbs-up"></span><span>&nbsp;&nbsp;{{likes}}</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</template>
