@@ -8,6 +8,9 @@
 	color: #3B5998;
 	font-weight: bolder;
 }
+.category-btn {
+	width: 70%;
+}
 
 
 /*  ----------------------------------------  */
@@ -113,10 +116,10 @@ body {
 #right-panel {
 	overflow-y: scroll;
 }
-#category, #tags {
+#category {
 	padding-top: 10px;
 }
-#category .list-group button, #tags .list-group button {
+#category .list-group button {
 	max-width: 80%;
 }
 #sorting-row {

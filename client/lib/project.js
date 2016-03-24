@@ -15,13 +15,16 @@ if (Meteor.isClient) {
 			$('.comment-post-left').show();
 			$('.comment-post-profile-pic').hide();
 		};
-		// Session.set('activeImg', 1);
 	});
 
 	Template.project.events({
 		'click .task-well': function(event) {
 			event.preventDefault();
-			Router.go(window.location.pathname + '/task/' + this._id);
+			var curPath = window.location.pathname;
+			if (curPath[curPath.length - 1] == '/') {
+				curPath = curPath.substring(0, curPath.length - 1);
+			}
+			Router.go(curPath + '/task/' + this._id);
 		}
 	});
 
@@ -37,8 +40,10 @@ if (Meteor.isClient) {
 		},
 		'tasks': function() {
 			var taskPool = Tasks.findOne({projectId: this._id}).tasks;
+			var solutionPool = TaskSolutions.find({projectId: this._id}).fetch();
 			for (var i = 0; i < taskPool.length; i++) {
 				taskPool[i]._id = i;
+				taskPool[i].numOfSolutions = solutionPool[i].solutions.length;
 			}
 			return taskPool;
 		}

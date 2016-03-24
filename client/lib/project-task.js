@@ -8,27 +8,12 @@ if (Meteor.isClient) {
 		'click #submit-solution': function(event) {
 			event.preventDefault();
 			var solution = $('#solution').val();
-
 			var hasEntry = TaskSolutions.findOne({projectId: this.projectId, taskId: this._id});
 
 			if (hasEntry) {
-				TaskSolutions.update({projectId: this.projectId, taskId: this._id}, {$addToSet: {
-					solutions: {
-						userId: Meteor.userId(),
-						text: solution,
-						likes: 0
-					}
-				}});
+				Meteor.call('addSolution', this.projectId, this._id, solution);
 			} else {
-				TaskSolutions.insert({
-					projectId: this.projectId,
-					taskId: this._id,
-					solutions: [{
-						userId: Meteor.userId(),
-						text: solution,
-						likes: 0
-					}]
-				})
+				Meteor.call('saveSolution', this.projectId, this._id, solution);
 			}
 
 			$('#solution').val('');

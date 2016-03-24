@@ -24,16 +24,7 @@ if (Meteor.isClient) {
 			var password = $('.register-password').val();
 			var reentPassword = $('.register-reentpassword').val();
 			if (password == reentPassword) {
-				Accounts.createUser({
-					email: email,
-					username: username,
-					password: password,
-					profile: {
-						firstName: firstName,
-						lastName: lastName
-					},
-					createdAt: new Date()
-				}, function(err) {
+				Meteor.call('createNewUser', email, username, password, firstName, lastName, function(err) {
 					if (err) {
 						$('.register-alert').text(err.reason);
 						$('.register-alert').removeClass('hidden');

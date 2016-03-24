@@ -101,19 +101,7 @@ if (Meteor.isClient) {
 				var description = $('#project-description').val();
 				var projectId;
 
-				Projects.insert({
-					title: title,
-					description: description,
-					author: Meteor.user().username,
-					stage: 'project',
-					stats: {
-						views: 0,
-						stars: 0,
-					},
-					// category: category,
-					// tags: [],
-					createdAt: new Date()
-				}, function (err, _id) {
+				Meteor.call('addProject', title, description, function (err, _id) {
 					 saveCollaborators(_id);
 					 saveTasks(_id);
 					 Router.go('/project/' + _id)
@@ -138,10 +126,7 @@ if (Meteor.isClient) {
 						});
 					}
 
-					Collabs.insert({
-						projectId: _id,
-						collabs: collabs
-					});
+					Meteor.call('saveCollabs', _id, collabs);
 				}
 
 				var saveTasks = function(_id) {
@@ -157,10 +142,7 @@ if (Meteor.isClient) {
 						});
 					}
 
-					Tasks.insert({
-						projectId: _id,
-						tasks: tasks
-					});
+					Meteor.call('saveTasks', _id, tasks);
 				}
 			}
 			step++;
