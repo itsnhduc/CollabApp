@@ -1,5 +1,7 @@
 if (Meteor.isServer) {
 
+	var newProjectId;
+
 	Meteor.methods({
 		'createNewUser': function(email, username, password, firstName, lastName) {
 			Accounts.createUser({
@@ -13,7 +15,7 @@ if (Meteor.isServer) {
 				createdAt: new Date()
 			});
 		},
-		'addProject': function(title, description) {
+		'newProject': function(title, description, collabs, tasks) {
 			Projects.insert({
 				title: title,
 				description: description,
@@ -26,6 +28,21 @@ if (Meteor.isServer) {
 				// category: category,
 				// tags: [],
 				createdAt: new Date()
+			}, function(err, _id) {
+				if (err) {
+					throw new Meteor.Error(err);
+				} else {
+					Meteor.call('saveCollabs', _id, collabs, function(err) {
+						if (err) {
+							throw new Meteor.Error(err);
+						}
+					});
+					Meteor.call('saveTasks', _id, tasks, function(err) {
+						if (err) {
+							throw new Meteor.Error(err);
+						}
+					});
+				}
 			});
 		},
 		'saveCollabs': function(projectId, collabs) {

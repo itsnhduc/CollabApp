@@ -43,7 +43,11 @@ if (Meteor.isClient) {
 			var solutionPool = TaskSolutions.find({projectId: this._id}).fetch();
 			for (var i = 0; i < taskPool.length; i++) {
 				taskPool[i]._id = i;
-				taskPool[i].numOfSolutions = solutionPool[i].solutions.length;
+				if (solutionPool[i]) {
+					taskPool[i].numOfSolutions = solutionPool[i].solutions.length;
+				} else {
+					taskPool[i].numOfSolutions = 0;
+				}
 			}
 			return taskPool;
 		}

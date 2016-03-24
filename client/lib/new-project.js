@@ -101,49 +101,45 @@ if (Meteor.isClient) {
 				var description = $('#project-description').val();
 				var projectId;
 
-				Meteor.call('addProject', title, description, function (err, _id) {
-					 saveCollaborators(_id);
-					 saveTasks(_id);
-					 Router.go('/project/' + _id)
+				// Save collab
+				var collabs = [];
+				var collabPool = $('.individual-collab');
+				var nameList = collabPool.find('.collab-name');
+				var roleList = collabPool.find('.collab-role');
+
+				for (var i = 0; i < collabPool.length; i++) {
+					var username = nameList[i].value;
+					if (username == 'You') {
+						username = Meteor.user().username;
+					}
+					collabs.push({
+						username: username,
+						role: roleList[i].value
+					});
+				}
+
+				// Save tasks
+				var tasks = []
+				var taskPool = $('.modal');
+				var titleList = taskPool.find('#task-title');
+				var descriptionList = taskPool.find('#task-description');
+				
+				for (var i = 0; i < taskPool.length; i++) {
+					tasks.push({
+						title: titleList[i].value,
+						description: descriptionList[i].value
+					});
+				}
+
+				Meteor.call('newProject', title, description, collabs, tasks, function (err) {
+					if (err) {
+						throw new Meteor.Error(err);
+					} else {
+						setTimeout(function(){
+							Router.go('/explore');
+						}, 3000);
+					}
 				});
-
-				// ---> image
-
-				var saveCollaborators = function (_id) {
-					var collabs = [];
-					var collabPool = $('.individual-collab');
-					var nameList = collabPool.find('.collab-name');
-					var roleList = collabPool.find('.collab-role');
-
-					for (var i = 0; i < collabPool.length; i++) {
-						var username = nameList[i].value;
-						if (username == 'You') {
-							username = Meteor.user().username;
-						}
-						collabs.push({
-							username: username,
-							role: roleList[i].value
-						});
-					}
-
-					Meteor.call('saveCollabs', _id, collabs);
-				}
-
-				var saveTasks = function(_id) {
-					var tasks = []
-					var taskPool = $('.modal');
-					var titleList = taskPool.find('#task-title');
-					var descriptionList = taskPool.find('#task-description');
-					
-					for (var i = 0; i < taskPool.length; i++) {
-						tasks.push({
-							title: titleList[i].value,
-							description: descriptionList[i].value
-						});
-					}
-
-					Meteor.call('saveTasks', _id, tasks);
-				}
 			}
 			step++;
 		},

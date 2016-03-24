@@ -33,6 +33,7 @@ if (Meteor.isClient) {
 						Router.go('/explore');
 					}
 				});
+				Meteor.loginWithPassword(username, password);
 			} else {
 				$('.register-alert').val('Passwords unmatched');
 				$('.register-alert').removeClass('hidden');
