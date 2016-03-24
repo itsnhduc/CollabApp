@@ -20,11 +20,15 @@ if (Meteor.isClient) {
 		},
 		'click .like': function() {
 			if ($('.like').hasClass('liked')) {
-				Meteor.call('incLike', this.projectId, this._id, -1);
+				Meteor.call('likeSolution', this.projectId, this._id, 0);
 				$('.like').removeClass('liked');
+				$('.like-icon').removeClass('fa-thumbs-o-up');
+				$('.like-icon').addClass('fa-thumbs-up');
 			} else {
-				Meteor.call('incLike', this.projectId, this._id, 1);
+				Meteor.call('likeSolution', this.projectId, this._id, 1);
 				$('.like').addClass('liked');
+				$('.like-icon').removeClass('fa-thumbs-up');
+				$('.like-icon').addClass('fa-thumbs-o-up');
 			}
 		}
 	});
@@ -40,6 +44,11 @@ if (Meteor.isClient) {
 				solutionPool[i].collabName = user.profile.firstName + ' ' + user.profile.lastName;
 				solutionPool[i].projectId = this.projectId;
 				solutionPool[i]._id = this._id;
+				
+				var hasLiked = solutionPool[i].likes.indexOf(Meteor.userId()) != -1;
+				solutionPool[i].likeStatus = hasLiked ? 'liked' : '';
+				solutionPool[i].icon = hasLiked ? 'fa-thumbs-up' : 'fa-thumbs-o-up';
+				solutionPool[i].numOfLikes = solutionPool[i].likes.length;
 			}
 			return solutionPool;
 		}

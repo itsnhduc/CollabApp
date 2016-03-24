@@ -62,7 +62,7 @@ if (Meteor.isServer) {
 				solutions: {
 					userId: Meteor.userId(),
 					text: solutionText,
-					likes: 0
+					likes: []
 				}
 			}});
 		},
@@ -73,13 +73,20 @@ if (Meteor.isServer) {
 				solutions: [{
 					userId: Meteor.userId(),
 					text: solutionText,
-					likes: 0
+					likes: []
 				}]
 			});
 		},
-		'incLike': function(projectId, taskId, offset) {
+		'likeSolution': function(projectId, taskId, isLike) {
 			var solutionPool = TaskSolutions.findOne({projectId: projectId, taskId: taskId}).solutions;
-			solutionPool[taskId].likes += offset;
+			if (isLike) {
+				solutionPool[taskId].likes.push(Meteor.userId());
+			} else {
+				var position = solutionPool[taskId].likes.indexOf(Meteor.userId());
+				if (position != -1) {
+					solutionPool[taskId].likes.splice(position, 1);
+				}
+			}
 			TaskSolutions.update({projectId: projectId, taskId: taskId}, {$set: {
 				solutions: solutionPool
 			}});
