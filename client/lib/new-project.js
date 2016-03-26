@@ -99,7 +99,7 @@ if (Meteor.isClient) {
 				// Save project info
 				var title = $('#project-title').val();
 				var description = $('#project-description').val();
-				var projectId;
+				var category = $('#category').val();
 
 				// Save collab
 				var collabs = [];
@@ -131,7 +131,7 @@ if (Meteor.isClient) {
 					});
 				}
 
-				Meteor.call('newProject', title, description, collabs, tasks, function (err) {
+				Meteor.call('newProject', title, description, category, collabs, tasks, function (err) {
 					if (err) {
 						throw new Meteor.Error(err);
 					} else {

@@ -7,7 +7,7 @@
 				<li class="active">Task #{{_id}}</li>
 			</ol>
 			<div class="col-md-push-9 col-md-3">
-				<div class="project-task-stats">9 solutions</div>
+				<div class="project-task-stats">{{numOfSolutions}} solutions</div>
 				<div class="project-task-stats"><span class="glyphicon glyphicon-user"></span><span>&nbsp;&nbsp;99</span></div>
 				<div class="project-task-stats"><span class="glyphicon glyphicon-hourglass"></span><span>&nbsp;&nbsp;2 weeks from deadline</span></div>
 				<div class="project-task-stats"></div>
@@ -37,8 +37,8 @@
 								<h6 class="text-justify project-task-content">{{text}}</h6>
 							</div>
 							<div class="row">
-								<span class="like clickable {{likeStatus}}">
-									<i class="fa {{icon}} like-icon">&nbsp;&nbsp;{{numOfLikes}}</i>
+								<span id="like{{_id}}" class="like clickable {{likeStatus}}">
+									<i id="like-icon{{_id}}" class="fa {{icon}} like-icon">&nbsp;&nbsp;{{numOfLikes}}</i>
 								</span>
 							</div>
 						</div>

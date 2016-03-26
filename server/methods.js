@@ -15,10 +15,11 @@ if (Meteor.isServer) {
 				createdAt: new Date()
 			});
 		},
-		'newProject': function(title, description, collabs, tasks) {
+		'newProject': function(title, description, category, collabs, tasks) {
 			Projects.insert({
 				title: title,
 				description: description,
+				category: category,
 				author: Meteor.user().username,
 				stage: 'project',
 				stats: {
@@ -77,14 +78,14 @@ if (Meteor.isServer) {
 				}]
 			});
 		},
-		'likeSolution': function(projectId, taskId, isLike) {
+		'likeSolution': function(projectId, taskId, solutionId, isLike) {
 			var solutionPool = TaskSolutions.findOne({projectId: projectId, taskId: taskId}).solutions;
 			if (isLike) {
-				solutionPool[taskId].likes.push(Meteor.userId());
+				solutionPool[solutionId].likes.push(Meteor.userId());
 			} else {
-				var position = solutionPool[taskId].likes.indexOf(Meteor.userId());
+				var position = solutionPool[solutionId].likes.indexOf(Meteor.userId());
 				if (position != -1) {
-					solutionPool[taskId].likes.splice(position, 1);
+					solutionPool[solutionId].likes.splice(position, 1);
 				}
 			}
 			TaskSolutions.update({projectId: projectId, taskId: taskId}, {$set: {
