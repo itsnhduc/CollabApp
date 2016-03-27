@@ -25,6 +25,21 @@ if (Meteor.isClient) {
 				curPath = curPath.substring(0, curPath.length - 1);
 			}
 			Router.go(curPath + '/task/' + this._id);
+		},
+		'click #submit-new-topic': function(event) {
+			event.preventDefault();
+
+			var topicTitle = $('#new-topic-title').val();
+			var postContent = $('#new-initial-post').val();
+			var projectId = this._id;
+
+			Meteor.call('newDiscussion', projectId, topicTitle, postContent);
+
+			$('#new-topic-title').val('');
+			$('#new-initial-post').val('');
+		},
+		'click .topic': function() {
+			console.log(this);
 		}
 	});
 
@@ -50,6 +65,36 @@ if (Meteor.isClient) {
 				}
 			}
 			return taskPool;
+		},
+		'topics': function() {
+			var topicPool = Discussions.findOne({projectId: this._id}).topics;
+			for (var i = 0; i < topicPool.length; i++) {
+				var curTopic = topicPool[i];
+				var authorRecord = Meteor.users.findOne(curTopic.authorId);
+				topicPool[i].authorName = authorRecord.profile.firstName + ' ' + authorRecord.profile.lastName;
+				var discussionPostsEntry = DiscussionPosts.findOne({projectId: this._id, topicId: i});
+				if (discussionPostsEntry) {
+					topicPool[i].postCount = discussionPostsEntry.posts.length;
+				} else {
+					topicPool[i].postCount = 0;
+				}
+				var created = Math.floor(((new Date()).getTime() - curTopic.createdAt.getTime()) / 1000 / 60); // problem: non-reactive
+				if (created == 0) {
+					created = 'Just now';
+				} else if (created < 60) {
+					created += ' minutes ago';
+				} else {
+					created = Math.floor(created / 60);
+					if (created < 24) {
+						created = Math.floor(created / 60) + ' hours ago';
+					} else {
+						created = Math.floor(created / 60 / 24) + ' days ago';
+					}
+				}
+				topicPool[i].created = created;
+				topicPool[i]._id = i;
+			}
+			return topicPool;
 		}
 	});
 

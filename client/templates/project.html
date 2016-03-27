@@ -122,52 +122,47 @@
 					{{/each}}
 				</div>
 				<div id="project-discussion" role="tabpanel" class="tab-pane">
-					<div class="project-discussion-new-topic">
-						<button class="btn btn-success">New topic</button>
-					</div>
+					<form class="project-discussion-new-topic">
+						<div class="form-group">
+							<input id="new-topic-title" class="form-control" type="text" placeholder="New topic title">
+						</div>
+						<div class="form-group">
+							<textarea id="new-initial-post" class="form-control" placeholder="What's on your mind?"></textarea>
+						</div>
+						<div class="form-group">
+							<button id="submit-new-topic" class="btn btn-success">New topic</button>
+						</div>
+					</form>
 					<div id="project-discussion-list">
-						<table class="table table-striped table-responsive">
+						<table class="table table-hover table-responsive">
 							<tr>
 								<th class="title-col">Title</th>
 								<th class="author-col">Author</th>
 								<th class="created -col">Created</th>
-								<th class="joined-col">Joined</th>
+								<!-- <th class="joined-col">Joined</th> -->
 								<th class="view-col">View</th>
 								<th class="post col">Post</th>
-								<th class="last-active-col">Last activity</th>
+								<!-- <th class="last-active-col">Last activity</th> -->
 							</tr>
-							<tr> <!-- navigate to discussion -->
-								<td class="title-col">Task title</td>
-								<td class="author-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive"></td>
-								<td class="created-col">4h ago</td>
-								<td class="joined-col">
-									<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
-									<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
-									<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
-								</td>
-								<td class="view-col">99</td>
-								<td class="post-col">999</td>
-								<td class="last-active-col">
-									<span><img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline"></span>
-									<span>&nbsp;4h ago</span>
-								</td>
-							</tr>
-							<tr> <!-- navigate to discussion -->
-								<td class="title-col">Task title</td>
-								<td class="author-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive"></td>
-								<td class="created-col">4h ago</td>
-								<td class="joined-col">
-									<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
-									<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
-									<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
-								</td>
-								<td class="view-col">99</td>
-								<td class="post-col">999</td>
-								<td class="last-active-col">
-									<span><img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline"></span>
-									<span>&nbsp;4h ago</span>
-								</td>
-							</tr>
+							{{#each topics}}
+								<tr class="clickable topic"> <!-- navigate to discussion -->
+									<td class="title-col">{{title}}</td>
+									<!-- <td class="author-col"><img src="http://placehold.it/25x25" class="img-circle img-responsive"></td> -->
+									<td class="author-col">{{authorName}}</td>
+									<td class="created-col">{{created}}</td>
+									<!-- <td class="joined-col">
+										<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
+										<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
+										<img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline">
+									</td> -->
+									<td class="view-col">{{views}}</td>
+									<td class="post-col">{{postCount}}</td>
+									<!-- <td class="last-active-col">
+										<span><img src="http://placehold.it/25x25" class="img-circle img-responsive project-discussion-img-inline"></span>
+										<span>&nbsp;4h ago</span>
+									</td> -->
+								</tr>
+							{{/each}}
 						</table>
 					</div>
 				</div>

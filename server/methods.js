@@ -33,16 +33,8 @@ if (Meteor.isServer) {
 				if (err) {
 					throw new Meteor.Error(err);
 				} else {
-					Meteor.call('saveCollabs', _id, collabs, function(err) {
-						if (err) {
-							throw new Meteor.Error(err);
-						}
-					});
-					Meteor.call('saveTasks', _id, tasks, function(err) {
-						if (err) {
-							throw new Meteor.Error(err);
-						}
-					});
+					Meteor.call('saveCollabs', _id, collabs);
+					Meteor.call('saveTasks', _id, tasks);
 				}
 			});
 		},
@@ -91,7 +83,54 @@ if (Meteor.isServer) {
 			TaskSolutions.update({projectId: projectId, taskId: taskId}, {$set: {
 				solutions: solutionPool
 			}});
-		}
+		},
+        'newDiscussion': function(projectId, title, postContent) {
+            var topicEntry = Discussions.findOne({projectId: projectId});
+            if (topicEntry) {
+                Discussions.update({projectId: projectId}, {$addToSet: {
+                    topics: {
+                        title: title,
+                        authorId: Meteor.userId(),
+                        views: 0,
+                        createdAt: new Date()
+                    }
+                }});
+                Meteor.call('addPost', projectId, topicEntry.topics.length, postContent);
+            } else {
+                Discussions.insert({
+                    projectId: projectId,
+                    topics: [{
+                        title: title,
+                        authorId: Meteor.userId(),
+                        views: 0,
+                        createdAt: new Date()
+                    }]
+                });
+                Meteor.call('addPost', projectId, 0, postContent);
+            }
+        },
+        'addPost': function(projectId, topicId, content) {
+            var discussionPostEntry = DiscussionPosts.findOne({projectId: projectId, topicId: topicId});
+            if (discussionPostEntry) {
+                DiscussionPosts.update({projectId: projectId, topicId: topicId}, {$addToSet: {
+                    posts: {
+                        userId: Meteor.userId(),
+                        content: content,
+                        createdAt: new Date()
+                    }
+                }});
+            } else {
+                DiscussionPosts.insert({
+                    projectId: projectId,
+                    topicId: topicId,
+                    posts: [{
+                        userId: Meteor.userId(),
+                        content: content,
+                        createdAt: new Date()
+                    }]
+                });
+            }
+        }
 	});
 
 }
