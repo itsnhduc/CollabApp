@@ -27,13 +27,19 @@ block body-content
       button.btn.btn-primary.center-block(onclick="location.href = 'new_project_page_1.html'") New
       .row.center-block#category
         h5 Categories
-        .input-group
-          .input-group-button
-            button.btn.btn-default Category 1
-            button.btn.btn-default Category 2
-            button.btn.btn-default Category 3
-            button.btn.btn-default Category 4
-            button.btn.btn-default Category 5
+        .btn-group(data-toggle="buttons")
+          label.btn.btn-default.active All
+            input(type="checkbox", autocomplete="off", checked)
+          label.btn.btn-default Category 1
+            input(type="checkbox", autocomplete="off")
+          label.btn.btn-default Category 2
+            input(type="checkbox", autocomplete="off")
+          label.btn.btn-default Category 3
+            input(type="checkbox", autocomplete="off")
+          label.btn.btn-default Category 4
+            input(type="checkbox", autocomplete="off")
+          label.btn.btn-default Category 5
+            input(type="checkbox", autocomplete="off")
     .col-md-10#right-panel
       .row.center-block#sorting-row
         .col-md-4
@@ -153,6 +159,7 @@ block body-content
 
 block script
   script.
+    // controlling the height of left panel
     $(document).ready(function() {
       var screen_height = $(window).height();
       var navbar_content_height = $('.navbar').height();

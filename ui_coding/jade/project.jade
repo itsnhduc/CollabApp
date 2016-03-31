@@ -78,24 +78,29 @@ block body-content
         // Tab panes
         .tab-content
           #dashboard.tab-pane.active(role='tabpanel')
-            .col-md-8
-              .panel.panel-default
-                .panel-heading
-                  h3.panel-title Announcements
-                .panel-body
-                  ul
-                    li Annoucement 1
-                    li Annoucement 2
-                    li Annoucement 3
-            .col-md-8
-              .panel.panel-default
-                .panel-heading
-                  h3.panel-title Recent
-                .panel-body
-                  ul
-                    li Updates 1
-                    li Updates 2
-                    li Updates 3
+            ul.timeline
+              li(onclick="location.href = 'project_task.html'")
+                .timeline-badge
+                  i.glyphicon.glyphicon-check
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title Task completed
+                    p
+                      small.text-muted
+                        i.glyphicon.glyphicon-time
+                        |  11 hours ago
+                  .timeline-body
+                    p
+                      | Solution: Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo...
+              li.timeline-inverted(onclick="location.href = 'project_discussion.html'")
+                .timeline-badge.warning
+                  i.glyphicon.glyphicon-credit-card
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title New Discussion Thread
+                  .timeline-body
+                    p
+                      | Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
 
           #project-tasks.tab-pane(role='tabpanel')
             .well.well-sm.col-md-11(onclick="location.href = 'project_task.html'")
@@ -189,8 +194,8 @@ block script
         itemsDesktopSmall : [979,3]
       });
       if (screen.width < 992) {
-        $('.owl-carousel').hide();
+        $('.owl-carousel.owl-theme').hide();
       } else {
-        $('.owl-carousel').show();
-      };
+        $('.owl-carousel.owl-theme').show();
+      }
     })
