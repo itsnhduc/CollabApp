@@ -32,25 +32,59 @@ html(lang='en')
           block navbar-link
             ul.nav.navbar-nav
               li
-                // link to another page
                 a(href='explore.html') Brainstorm
               li
-                // link to another page
                 a(href='explore.html') Projects
               li
-                // link to another page
                 a(href='community.html') Community
               li
-                // link to another page
                 a(href='help.html') Help
             ul.nav.navbar-nav.navbar-right
               li
-                // add modal
-                a(href='#') Login
+                a(data-toggle="modal", data-target="#login") Login
               li
-                // add modal
-                a(href='#') Register
-      
+                a(data-toggle="modal", data-target="#register") Register
+
+    .modal.fade#login(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4.text-center.modal-title Welcome back!
+          .modal-body
+            form
+              .form-group
+                input.center-block.login-modal-element-1(type="email", placeholder="Email")
+              .form-group
+                input.center-block.login-modal-element-1(type="password", placeholder="Password")
+              button.btn.btn-default.center-block.login-modal-element-2 Login
+              h6.text-center
+                a.text-muted Forgot Password?
+            .container-fluid
+              .btn.btn-danger.login-modal-login-with Log in with Google+ <img src="img/google_plus_logo.png", width="20px"></img>
+              .btn.btn-primary.login-modal-login-with Log in with Facebook <img src="img/facebook_logo.png", width="20px"></img>
+
+    .modal.fade#register(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-body
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4.text-center Join the revolution now!!!
+            .container-fluid(style="border-bottom: 3px solid #d3d3d3; padding-bottom: 5px;")
+              .btn.btn-danger.login-modal-login-with Sign up with Google+ <img src="img/google_plus_logo.png", width="20px"></img>
+              .btn.btn-primary.login-modal-login-with Sign up with Facebook <img src="img/facebook_logo.png", width="20px"></img>
+            h4.text-center OR
+            form
+              .form-group
+                input.center-block.login-modal-element-1(type="text", placeholder="Username")
+              .form-group
+                input.center-block.login-modal-element-1(type="email", placeholder="Email")
+              .form-group
+                input.center-block.login-modal-element-1(type="password", placeholder="Password")
+              button.btn.btn-default.center-block.login-modal-element-2 Sign up
+
     block body-content
       h1 Hello, world!
 

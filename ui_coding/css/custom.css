@@ -8,6 +8,27 @@ body {
 .zero-padding {
     padding: 0px;
 }
+.login-modal-element-1 {
+    width: 95%;
+    padding: 0px 10px;
+    border: 1px solid #aaaaaa;
+}
+.login-modal-element-2 {
+    width: 60%;
+    padding: 10px 5px;
+    background-color: #fafafa;
+}
+.login-modal-login-with {
+    width: 47.5%;
+    margin: 5px;
+}
+@media (max-width: 992px) {
+    .login-modal-login-with {
+        width: 100%;
+        margin: 5px;
+        float: none
+    }
+}
 /* index.html */
 #backdrop {
     background: url("http://placehold.it/1349x600") center;
