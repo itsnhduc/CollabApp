@@ -11,7 +11,8 @@ if (Meteor.isClient) {
 					$('.login-alert').removeClass('hidden');
 					throw new Meteor.Error(err);
 				} else {
-					Router.go('/explore');
+					// Router.go('/explore');
+					$('#login').modal('toggle');
 				}
 			});
 		},
@@ -30,12 +31,13 @@ if (Meteor.isClient) {
 						$('.register-alert').removeClass('hidden');
 						throw new Meteor.Error(err);
 					} else {
-						Router.go('/explore');
+						// Router.go('/explore');
+						$('#register').modal('toggle');
 					}
 				});
 				Meteor.loginWithPassword(username, password);
 			} else {
-				$('.register-alert').val('Passwords unmatched');
+				$('.register-alert').text('Passwords unmatched');
 				$('.register-alert').removeClass('hidden');
 				throw new Meteor.Error('Passwords unmatched');
 			}
