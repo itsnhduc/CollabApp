@@ -31,16 +31,19 @@
 					</li>
 				{{else}}
 					<li>
-						<a href="{{pathFor route='authentication'}}">Login</a>
+						<!--<a href="{{pathFor route='authentication'}}">Login</a>-->
+						<a data-toggle="modal" data-target="#login">Login</a>
 					</li>
 					<li>
-						<a href="{{pathFor route='authentication'}}">Register</a>
+						<!--<a href="{{pathFor route='authentication'}}">Register</a>-->
+						<a data-toggle="modal" data-target="#register">Register</a>
 					</li>
 				{{/if}}
 				</ul>
 			</div>
 		</div>
 	</nav>
+	{{> authentication}}
 	{{> yield}}
 	<footer id="footer" class="container-fluid">
 		<div class="col-md-2"></div>

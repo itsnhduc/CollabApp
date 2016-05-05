@@ -1,5 +1,80 @@
 <template name="authentication">
-	<div class="container">
+	<div id="login" tabindex="-1" role="dialog" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            <h4 class="text-center modal-title">Welcome back!</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+				<div class="form-group">
+					<div class="alert alert-danger login-alert hidden" role="alert"></div>
+              	</div>
+              	<div class="form-group">
+					<input type="text" class="form-control login-username center-block login-modal-element-1" placeholder="Username" required>
+              	</div>
+              	<div class="form-group">
+					<input type="password" class="form-control login-password center-block login-modal-element-1" placeholder="Password" required>
+              	</div>
+              	<div class="form-group">
+					<button type="submit" class="btn btn-default login-submit center-block login-modal-element-2">Login</button>
+              		<h6 class="text-center"><a class="text-muted">Forgot Password?</a></h6>
+              	</div>
+            </form>
+            <div class="container-fluid">
+              <button class="btn btn-danger login-modal-login-with">Log in with Google+ <i class="fa fa-google-plus-square" aria-hidden="true"></i></button>
+              <button class="btn btn-primary login-modal-login-with">Log in with Facebook <i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="register" tabindex="-1" role="dialog" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            <h4 class="text-center">Join the revolution now!!!</h4>
+            <div style="border-bottom: 3px solid #d3d3d3; padding-bottom: 5px;" class="container-fluid">
+              <button class="btn btn-danger login-modal-login-with">Sign up with Google+ <i class="fa fa-google-plus-square" aria-hidden="true"></i></button>
+              <button class="btn btn-primary login-modal-login-with">Sign up with Facebook <i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+            </div>
+            <h4 class="text-center">OR</h4>
+            <form>
+				<div class="form-group">
+					<div class="alert alert-danger register-alert hidden" role="alert"></div>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control register-firstname center-block login-modal-element-1" placeholder="First name" required>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control register-lastname center-block login-modal-element-1" placeholder="Last name" required>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control register-email center-block login-modal-element-1" placeholder="Email" required>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control register-username center-block login-modal-element-1" placeholder="Username" required>
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control register-password center-block login-modal-element-1" placeholder="Password" required>
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control register-reentpassword center-block login-modal-element-1" placeholder="Re-enter Password" required>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default register-submit center-block login-modal-element-2">Sign up</button>
+				</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	<!--<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<form>
@@ -24,5 +99,5 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</div>-->
 </template>

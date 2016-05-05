@@ -1,4 +1,14 @@
 if (Meteor.isClient) {
+	
+	Template.explore.onRendered(function() {
+		var screen_height = $(window).height();
+        var navbar_content_height = $('.navbar').height();
+        var content_height = screen_height - navbar_content_height;
+        $('#left-panel').css('height', content_height + 'px');
+        $('#right-panel').css('height', content_height + 'px');
+        $('#left-panel').css('max-height', content_height + 'px');
+        $('#right-panel').css('max-height', content_height + 'px');
+	});
 
 	Template.explore.helpers({
 		'projects': function() {

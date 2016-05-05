@@ -74,34 +74,31 @@
 			<!-- Tab panes-->
 			<div class="tab-content">
 				<div id="dashboard" role="tabpanel" class="tab-pane active">
-					<div class="col-md-8">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h3 class="panel-title">Announcements</h3>
+					<ul class="timeline">
+						<li onclick="location.href = 'project_task.html'">
+							<div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+							<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Task completed</h4>
+								<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago</small></p>
 							</div>
-							<div class="panel-body">
-								<ul>
-									<li>Annoucement 1</li>
-									<li>Annoucement 2</li>
-									<li>Annoucement 3</li>
-								</ul>
+							<div class="timeline-body">
+								<p>Solution: Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo...</p>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-8">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h3 class="panel-title">Recent</h3>
 							</div>
-							<div class="panel-body">
-								<ul>
-									<li>Updates 1</li>
-									<li>Updates 2</li>
-									<li>Updates 3</li>
-								</ul>
+						</li>
+						<li onclick="location.href = 'project_discussion.html'" class="timeline-inverted">
+							<div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+							<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">New Discussion Thread</h4>
 							</div>
-						</div>
-					</div>
+							<div class="timeline-body">
+								<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+							</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 				<div id="project-tasks" role="tabpanel" class="tab-pane">
 					{{#each tasks}}

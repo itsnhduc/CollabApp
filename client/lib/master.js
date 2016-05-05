@@ -7,7 +7,7 @@ if (Meteor.isClient) {
 				if (err) {
 					throw new Meteor.Error(err.message);
 				} else {
-					Router.go('/authentication');
+					// Router.go('/authentication');
 				}
 			})
 		}
