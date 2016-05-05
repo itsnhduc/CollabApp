@@ -29,9 +29,9 @@
 					<form class="form-inline">
 						<div class="form-group">
 							<label>Viewing:</label>
-							<select class="form-control">
+							<select id="project-stage" class="form-control">
 								<option>Any</option>
-								<option>Projects</option>
+								<option>Project</option>
 								<option>Brainstorm</option>
 							</select>
 						</div>
@@ -41,8 +41,9 @@
 					<form class="form-inline">
 						<div class="form-group">
 							<label>Sort by:</label>
-							<select class="form-control">
+							<select id="sort" class="form-control">
 								<option>Newest</option>
+								<option>Title</option>
 								<option>Most viewed</option>
 							</select>
 						</div>
@@ -52,8 +53,8 @@
 					<form class="form-inline">
 						<div class="form-group">
 							<div class="input-group">
-								<input type="text" placeholder="Search" class="form-control">
-								<span class="input-group-addon glyphicon glyphicon-search"> </span>
+								<span class="input-group-addon glyphicon glyphicon-search"></span>
+								<input id="search" type="text" placeholder="Search" class="form-control">
 							</div>
 						</div>
 					</form>

@@ -1,6 +1,34 @@
 if (Meteor.isClient) {
 	
+	var addToSelector = function(key, value) {
+		var selector = Session.get('selector');
+		if ((value == 'any' || value == 'all') && selector[key] != undefined) {
+			delete selector[key];
+		} else {
+			selector[key] = value;
+		}
+		Session.set('selector', selector);
+	}
 	
+	$(document).on('change','#project-stage',function(){
+		var selectedStage = this.value.toLowerCase();
+		addToSelector('stage', selectedStage);
+	});
+	
+	$(document).on('change','#sort',function(){
+		var sortOption = this.value;
+		switch (sortOption) {
+			case 'Newest':
+				Session.set('sorter', {createdAt: 1});
+			case 'Title':
+				Session.set('sorter', {title: 1});
+				break;
+			case 'Most viewed':
+				Session.set('sorter', {views: -1});
+				break;
+			default:
+		}
+	});
 	
 	Template.explore.onRendered(function() {
 		var screen_height = $(window).height();
@@ -11,11 +39,14 @@ if (Meteor.isClient) {
         $('#left-panel').css('max-height', content_height + 'px');
         $('#right-panel').css('max-height', content_height + 'px');
 		Session.set('selector', {});
+		Session.set('sorter', {createdAt: -1});
+		
+
 	});
 
 	Template.explore.helpers({
 		'projects': function() {
-			return Projects.find(Session.get('selector')).fetch();
+			return Projects.find(Session.get('selector'), {sort: Session.get('sorter')}).fetch();
 		},
 		'labelType': function() {
 			var stage = this.stage;
@@ -50,12 +81,8 @@ if (Meteor.isClient) {
 		},
 		'click .cat-btn': function(event) {
 			$('.cat-btn.active').removeClass('active');
-			var selected = event.target.getAttribute('value');
-			if (selected == 'All') {
-				Session.set('selector', {});
-			} else {
-				Session.set('selector', { category: selected });
-			}
+			var selected = event.target.getAttribute('value').toLowerCase();
+			addToSelector('category', selected);
 		}
 	});
 
