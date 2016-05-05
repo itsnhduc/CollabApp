@@ -5,19 +5,19 @@
 			<div id="category" class="row center-block">
 				<h5>Categories</h5>
 				<div data-toggle="buttons" class="btn-group">
-					<label class="btn btn-default active">All
+					<label class="btn btn-default cat-btn active" value = "All">All
 						<input type="checkbox" autocomplete="off" checked>
 					</label>
-					<label class="btn btn-default">Mechanical
+					<label class="btn btn-default cat-btn" value="Mechanical">Mechanical
 						<input type="checkbox" autocomplete="off">
 					</label>
-					<label class="btn btn-default">Aeronautical
+					<label class="btn btn-default cat-btn" value="Aeronautical">Aeronautical
 						<input type="checkbox" autocomplete="off">
 					</label>
-					<label class="btn btn-default">Electrical
+					<label class="btn btn-default cat-btn" value="Electrical">Electrical
 						<input type="checkbox" autocomplete="off">
 					</label>
-					<label class="btn btn-default">Electronic
+					<label class="btn btn-default cat-btn" value="Electronic">Electronic
 						<input type="checkbox" autocomplete="off">
 					</label>
 				</div>
@@ -67,6 +67,7 @@
 						<div class="content-pill-author"><span><img src="http://placehold.it/20x20" class="img-circle"></span><span>&nbsp;&nbsp;&nbsp;{{author}}</span></div>
 						<div class="content-pill-description text-justify">{{description}}</div>
 						<div class="well zero-padding content-pill-footer">
+							<div class="label label-primary">{{category}}</div>
 							<div class="label {{labelType}}">{{stage}}</div>
 							<div class="badge">
 								<span class="glyphicon glyphicon-eye-open"></span>

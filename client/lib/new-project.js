@@ -120,8 +120,9 @@ if (Meteor.isClient) {
 
 				// Save tasks
 				var tasks = []
-				var taskPool = $('.modal');
+				var taskPool = $('.new-task-modal');
 				var titleList = taskPool.find('#task-title');
+				// console.log(titleList);
 				var descriptionList = taskPool.find('#task-description');
 				
 				for (var i = 0; i < taskPool.length; i++) {

@@ -1,5 +1,7 @@
 if (Meteor.isClient) {
 	
+	
+	
 	Template.explore.onRendered(function() {
 		var screen_height = $(window).height();
         var navbar_content_height = $('.navbar').height();
@@ -8,11 +10,12 @@ if (Meteor.isClient) {
         $('#right-panel').css('height', content_height + 'px');
         $('#left-panel').css('max-height', content_height + 'px');
         $('#right-panel').css('max-height', content_height + 'px');
+		Session.set('selector', {});
 	});
 
 	Template.explore.helpers({
 		'projects': function() {
-			return Projects.find();
+			return Projects.find(Session.get('selector')).fetch();
 		},
 		'labelType': function() {
 			var stage = this.stage;
@@ -43,6 +46,15 @@ if (Meteor.isClient) {
 				Router.go('/new-project');
 			} else {
 				Router.go('/authentication');
+			}
+		},
+		'click .cat-btn': function(event) {
+			$('.cat-btn.active').removeClass('active');
+			var selected = event.target.getAttribute('value');
+			if (selected == 'All') {
+				Session.set('selector', {});
+			} else {
+				Session.set('selector', { category: selected });
 			}
 		}
 	});
