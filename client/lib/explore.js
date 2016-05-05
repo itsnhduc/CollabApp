@@ -41,7 +41,10 @@ if (Meteor.isClient) {
 		Session.set('selector', {});
 		Session.set('sorter', {createdAt: -1});
 		
-
+		$('#search').keypress(function(event) {
+			var keyPressed = String.fromCharCode(event.which);
+			log(keyPressed);
+		});
 	});
 
 	Template.explore.helpers({
