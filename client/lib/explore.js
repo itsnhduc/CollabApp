@@ -41,9 +41,27 @@ if (Meteor.isClient) {
 		Session.set('selector', {});
 		Session.set('sorter', {createdAt: -1});
 		
-		$('#search').keypress(function(event) {
+		$('#search').on('keydown', function(event) {
 			var keyPressed = String.fromCharCode(event.which);
-			log(keyPressed);
+			var query = $('#search').val();
+			if (event.which == 8 || event.which == 46) { // backspace & delete
+				query = query.slice(0, query.length - 1);
+			} else {
+				query += keyPressed;
+			}
+			
+			var selector = Session.get('selector');
+			if (query == '') {
+				delete selector['$or'];
+			} else {
+				selector['$or'] = [
+					{title: {$regex: query, $options: 'i'}},
+					{description: {$regex: query, $options: 'i'}},
+					{author: {$regex: query, $options: 'i'}}
+				];
+			}
+			
+			Session.set('selector', selector);
 		});
 	});
 
