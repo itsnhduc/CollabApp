@@ -652,3 +652,28 @@ body {
 .task-pill-profile-pic {
     padding-top: 8px;
 }
+/* user.html */
+.user-control-dropdown {
+  padding: 3px 10px;
+}
+.user-right-panel {
+  padding-top: 2%;
+}
+.user-stats-title {
+  padding-top: 2px;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+.user-stats-content {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.project-and-involvement {
+  margin: 2px 4px;
+  width: 25%;
+}
+.project-and-involvement h6 {
+  max-width: 25%;
+  word-wrap: break-word;
+}
+/* user_config.html */

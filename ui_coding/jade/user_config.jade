@@ -1,0 +1,23 @@
+extends layout.jade
+
+block title
+  title Username | CollabApp
+
+block navbar-link
+  ul.nav.navbar-nav
+    li
+      a(href='explore.html') Brainstorm
+    li
+      a(href='explore.html') Projects
+    li
+      a(href='community.html') Community
+    li
+      a(href='help.html') Help
+  ul.nav.navbar-nav.navbar-right
+    li
+      a(data-toggle="dropdown") Username
+        span.caret
+      ul.dropdown-menu
+        li.user-control-dropdown Configure
+        li.divider(role="separator")
+        li.user-control-dropdown Logout
