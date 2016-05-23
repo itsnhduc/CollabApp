@@ -8,7 +8,7 @@
     <!-- Bootstrap-->
     <link href="css/bootstrap_paper.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <title>Username | CollabApp</title>
+    <title>User settings | CollabApp</title>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
     <!--if lt IE 9
@@ -95,11 +95,95 @@
         </div>
       </div>
     </div>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid">
+      <div class="col-md-1"></div>
+      <div class="col-md-3 configure-left-panel">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
+          <li> <a data-toggle="tab" href="#security">Account</a></li>
+        </ul>
+      </div>
+      <div class="col-md-7 configure-right-panel tab-content">
+        <div id="profile" role="tabpanel" class="tab-pane fade in active">
+          <form>
+            <div class="form-group">
+              <button class="btn btn-success pull-right profile-update-btn">Update</button>
+            </div>
+            <div class="form-group">
+              <label>Profile picture</label>
+              <div class="row zero-margin zero-padding">
+                <div class="col-xs-3 col-sm-4 col-md-3"><img src="http://placehold.it/150x150" class="img-rounded img-responsive center-block"></div>
+                <div class="col-xs-9 col-sm-8 col-md-9">
+                  <button class="btn btn-default">Upload</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" placeholder="Show current username" class="form-control profile-username-input">
+            </div>
+            <h4 class="profile-divider">Let others know you well :)</h4>
+            <div class="col-md-6 zero-padding form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="First name" class="form-control profile-name-input">
+            </div>
+            <div class="col-md-6 zero-padding form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Last name" class="form-control profile-name-input">
+            </div>
+            <div class="form-group">
+              <label>Profession</label>
+              <input type="text" placeholder="Profession" class="form-control profile-profession-input">
+            </div>
+            <div class="form-group">
+              <label>Skills</label>
+              <input type="text" placeholder="Skills" class="form-control profile-skills-input">
+            </div>
+            <div class="form-group">
+              <label>More about you</label>
+              <textarea rows="5" placeholder="Describe more about yourself" class="form-control profile-more-about-input"></textarea>
+            </div>
+          </form>
+        </div>
+        <div id="security" role="tabpanel" class="tab-pane fade in">
+          <div class="row zero-margin security-change-email">
+            <form>
+              <div class="form-group">
+                <label>Change mail address</label>
+                <input type="email" placeholder="Show current email" class="form-control">
+              </div>
+              <button class="btn btn-warning">Update</button>
+            </form>
+          </div>
+          <div class="row zero-margin security-change-password">
+            <form>
+              <div class="form-group">
+                <label>Change Password</label>
+                <input type="password" placeholder="Current password" class="form-control">
+                <input type="password" placeholder="New Password" class="form-control">
+                <input type="password" placeholder="Verify" class="form-control">
+              </div>
+              <button class="btn btn-danger">Change</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed-->
     <script src="js/bootstrap_3.36_min.js"></script>
+    <script>
+      $('.document').ready(function(){
+        if ($(window).width() < 992) {
+          $(".configure-left-panel .nav").removeClass("nav-stacked")
+        }
+        else {
+          $(".configure-left-panel .nav").addClass("nav-stacked")
+        }
+      })
+    </script>
     <footer id="footer" class="container-fluid">
       <div class="col-md-2"></div>
       <div class="col-md-4">

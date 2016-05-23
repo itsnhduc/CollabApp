@@ -677,3 +677,60 @@ body {
   word-wrap: break-word;
 }
 /* user_config.html */
+.configure-left-panel {
+  padding: 20px;
+}
+.configure-right-panel {
+  padding: 20px;
+}
+.security-change-email {
+  padding: 20px 0px;
+  border-bottom: 3px solid #d3d3d3;
+}
+.security-change-email label {
+  font-size: 20px;
+}
+.security-change-email input {
+  width: 50%;
+  min-width: 200px;
+  margin-left: 5px;
+}
+.security-change-password {
+  padding: 10px 0px;
+}
+.security-change-password label {
+  font-size: 20px;
+}
+.security-change-password input {
+  width: 50%;
+  min-width: 200px;
+  margin-left: 5px;
+}
+#profile label {
+  font-size: 20px;
+}
+.profile-update-btn {
+  width: 150px;
+}
+.profile-pic-row {
+  height: 100px;
+}
+.profile-username-input {
+  width: 50%;
+  min-width: 200px;
+}
+.profile-name-input {
+  width: 90%
+}
+.profile-profession-input {
+  width: 50%;
+}
+.profile-skills-input {
+  width: 60%;
+}
+.profile-more-about-input {
+  width: 75%;
+}
+.profile-divider {
+  padding: 20px 0px;
+}

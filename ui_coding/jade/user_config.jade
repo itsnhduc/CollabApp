@@ -1,7 +1,7 @@
 extends layout.jade
 
 block title
-  title Username | CollabApp
+  title User settings | CollabApp
 
 block navbar-link
   ul.nav.navbar-nav
@@ -21,3 +21,71 @@ block navbar-link
         li.user-control-dropdown Configure
         li.divider(role="separator")
         li.user-control-dropdown Logout
+
+block body-content
+  .container-fluid
+    .col-md-1
+    .col-md-3.configure-left-panel
+      ul.nav.nav-pills.nav-stacked
+        li.active
+          a(data-toggle="tab", href="#profile") Profile
+        li 
+          a(data-toggle="tab", href="#security") Account
+    .col-md-7.configure-right-panel.tab-content
+      #profile.tab-pane.fade.in.active(role="tabpanel")
+        form
+          .form-group
+            button.btn.btn-success.pull-right.profile-update-btn Update
+          .form-group
+            label Profile picture
+            .row.zero-margin.zero-padding
+              .col-xs-3.col-sm-4.col-md-3
+                img.img-rounded.img-responsive.center-block(src="http://placehold.it/150x150")
+              .col-xs-9.col-sm-8.col-md-9
+                button.btn.btn-default Upload
+          .form-group
+            label Username
+            input.form-control.profile-username-input(type="text", placeholder="Show current username")
+          h4.profile-divider Let others know you well :)
+          .col-md-6.zero-padding.form-group
+            label First Name
+            input.form-control.profile-name-input(type="text", placeholder="First name")
+          .col-md-6.zero-padding.form-group
+            label Last Name
+            input.form-control.profile-name-input(type="text", placeholder="Last name")
+          .form-group
+            label Profession
+            input.form-control.profile-profession-input(type="text", placeholder="Profession")
+          .form-group
+            label Skills
+            input.form-control.profile-skills-input(type="text", placeholder="Skills")
+          .form-group
+            label More about you
+            textarea.form-control.profile-more-about-input(rows="5", placeholder="Describe more about yourself")
+      #security.tab-pane.fade.in(role="tabpanel")
+        .row.zero-margin.security-change-email
+          form
+            .form-group
+              label Change mail address
+              input.form-control(type="email", placeholder="Show current email")
+            button.btn.btn-warning Update
+        .row.zero-margin.security-change-password
+          form
+            .form-group
+              label Change Password
+              input.form-control(type="password", placeholder="Current password")
+              input.form-control(type="password", placeholder="New Password")
+              input.form-control(type="password", placeholder="Verify")
+            button.btn.btn-danger Change
+    .col-md-1
+
+block script
+  script.
+      $('.document').ready(function(){
+        if ($(window).width() < 992) {
+          $(".configure-left-panel .nav").removeClass("nav-stacked")
+        }
+        else {
+          $(".configure-left-panel .nav").addClass("nav-stacked")
+        }
+      })
