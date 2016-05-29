@@ -23,11 +23,166 @@ body {
     margin: 5px;
 }
 @media (max-width: 992px) {
-    .login-modal-login-with {
-        width: 100%;
-        margin: 5px;
-        float: none
-    }
+  .login-modal-login-with {
+      width: 100%;
+      margin: 5px;
+      float: none
+  }
+  .messenger-btn {
+    left: 80%;
+    bottom: 5%;
+  }
+}
+.messenger-btn {
+  position: fixed;
+  left: 95%;
+  bottom: 5%;
+  opacity: 0.9;
+  z-index: 5;  
+}
+#messenger {
+  position: fixed;
+  z-index: 5;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 1px #888888;
+  border-radius: 2px 2px 0px 0px;
+  right: -275px;
+  bottom: 0%;
+  height: 500px;
+  width: 300px;
+  -webkit-transform: translate(-300px, 0) !important;
+  -ms-transform: translate(-300px, 0) !important;
+  transform: translate(-300px, 0) !important;
+}
+.messenger-head, .messenger-head-in-chat, .messenger-head-new {
+  height: 50px;
+  border-bottom: 0.5px solid #d3d3d3;
+  padding: 5px 10px;
+}
+.new-btn, .back-btn {
+  display: inline-block;
+}
+.right-search-bar, .right-username-bar, .right-to-who-bar {
+  width: 55%;
+  display: inline-block;
+  margin: 0px 5px;
+}
+.right-username-bar img {
+  display: inline-block;
+  margin: 0px 5px;
+}
+.right-username-bar span {
+  display: inline-block;
+  font-weight: 600;
+}
+.minimize-btn {
+  display: inline-block;
+}
+.messenger-body {
+  height: 420px;
+  overflow-y: scroll;
+  padding: 0px 5px;
+}
+.messenger-chat-list {
+  height: 60px;
+  max-height: 60px;
+  padding: 5px 2px;
+  border-bottom: 1px solid #d3d3d3;
+}
+.chat-list-pic {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 5px;
+}
+.chat-list-right-panel {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 5px;
+  max-width: 200px;
+  overflow-x: hidden;
+}
+.chat-list-username {
+  font-weight: 600;
+}
+.chat-list-last-message {
+  max-height: 20px;
+  overflow-y: hidden;
+}
+.messenger-footer {
+  height: 30px;
+  padding: 3px 0px;
+  vertical-align: middle;
+}
+#messenger-settings {
+  top: -100px;
+}
+.message-thread-left {
+  width: 50px;
+  display: inline-block;
+}
+.message-thread {
+  padding: 5px 2px;
+}
+.message-thread-content {
+  padding: 0px;
+}
+.messages {
+  height: 290px;
+  padding: 2px 5px;
+  overflow-y: scroll;
+}
+.message-bubble {
+  width: 180px;
+  max-width: 1800px;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #B2B2B2;
+  display: inline-block;
+  padding: 10px 15px;
+  position: relative;
+  vertical-align: middle;
+}
+.message-bubble::before {
+  background-color: #F2F2F2;
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  position: absolute;
+  top: 11px;
+  transform:         rotate( 29deg ) skew( -35deg );
+  -moz-transform:    rotate( 29deg ) skew( -35deg );
+  -ms-transform:     rotate( 29deg ) skew( -35deg );
+  -o-transform:      rotate( 29deg ) skew( -35deg );
+  -webkit-transform: rotate( 29deg ) skew( -35deg );
+  width: 20px;
+}
+.message-left {
+  float: left;   
+  margin: 5px 0px 5px 15px;         
+}
+.message-left::before {
+  box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+  left: -11px;           
+}
+.message-right {
+  float: right;   
+  margin: 5px 5px 0 0;
+}
+.message-right::before {
+  box-shadow: 2px -2px 2px 0px rgba( 178, 178, 178, .4 );
+  left: 190px;
+  display: none;     
+}
+.send-message {
+  box-shadow: 0 -2px 2px 0px rgba( 178, 178, 178, .4 );
+  padding: 10px 5px;
+  margin-top: 5px;
+}
+.send-btn {
+ margin: 5px 0px;
+}
+.self .message-bubble {
+  background-color: #f0f8ff;
 }
 /* index.html */
 #backdrop {

@@ -85,6 +85,116 @@ html(lang='en')
                 input.center-block.login-modal-element-1(type="password", placeholder="Password")
               button.btn.btn-default.center-block.login-modal-element-2 Sign up
 
+    button.btn.btn-primary.messenger-btn
+      span.glyphicon.glyphicon-envelope
+
+    block messenger
+      #messenger
+        .messenger-head
+          .new-btn
+            button.btn.btn-primary.center-block New
+          .right-search-bar
+            form
+              .form-group.has-feedback
+                input.form-control(type='text', placeholder='Search')
+                span.glyphicon.glyphicon-search.form-control-feedback
+          .minimize-btn
+            button.btn.btn-default.center-block
+              span.glyphicon.glyphicon-chevron-down
+        .messenger-head-in-chat
+          .back-btn
+            button.btn.btn-default.center-block
+              span.glyphicon.glyphicon-chevron-left
+          .right-username-bar
+            img.img-circle.img-responsive(src="http://placehold.it/40x40")
+            span Username
+          .minimize-btn
+            button.btn.btn-default.center-block
+              span.glyphicon.glyphicon-chevron-down
+        .messenger-head-new
+          .back-btn
+            button.btn.btn-default.center-block
+              span.glyphicon.glyphicon-chevron-left
+          .right-to-who-bar
+            form
+              .form-group
+                input.form-control(type='text', placeholder='To...')
+          .minimize-btn
+            button.btn.btn-default.center-block
+              span.glyphicon.glyphicon-chevron-down
+        .messenger-body
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+          .messenger-chat-list
+            img.img-circle.img-responsive.chat-list-pic(src="http://placehold.it/50x50")
+            .chat-list-right-panel
+              .chat-list-username Username
+              .text-muted.chat-list-last-message Last message Last message Last message
+        .conversation
+          .messages
+            .message-thread
+              .message-thread-left.pull-left
+                img.img-responsive.img-circle.center-block(src="http://placehold.it/50x50")
+              .message-bubble.message-left
+                .message-thread-content
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .message-thread
+              .message-thread-left.pull-left
+                img.img-responsive.img-circle.center-block(src="http://placehold.it/50x50")
+              .message-bubble.message-left
+                .message-thread-content
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .message-thread.self
+              .message-bubble.message-right
+                .message-thread-content 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dictum eros. Proin in ultricies nibh. Vestibulum tristique sollicitudin neque, vitae interdum diam laoreet at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          form.send-message
+            textarea.form-control(rows="3", cols="25", style="border: 1px solid #d3d3d3")
+            button.btn.btn-primary.form-control.send-btn Send
+        .messenger-footer
+          .col-md-6
+            .text-center Online status
+          .col-md-6.text-center
+            a(data-toggle="dropdown", data-target="dropup") Settings
+              span.caret
+            ul.dropdown-menu#messenger-settings
+              li.user-control-dropdown Appear Offline
+              li.divider(role="separator")
+              li.user-control-dropdown Settings
+
     block body-content
       h1 Hello, world!
 
@@ -93,7 +203,52 @@ html(lang='en')
     // Include all compiled plugins (below), or include individual files as needed
     script(src='js/bootstrap_3.36_min.js')
     block script
+    script.
+      $(document).ready(function(){
+        $(".conversation").hide();
+        $(".messenger-head-in-chat").hide();
+        $(".messenger-head-new").hide();
+        $("#messenger").hide();
 
+        $(".messenger-btn").click(function(){
+          $(".messenger-btn").hide();
+          $("#messenger").show();
+        })
+        $(".minimize-btn").click(function(){
+          $("#messenger").hide();
+          $(".messenger-btn").show();
+        })
+        $(".messenger-chat-list").click(function(){
+          $(".messenger-head").hide();
+          $(".messenger-body").hide();
+          $(".messenger-footer").hide();
+          $(".messenger-head-new").hide();
+          $(".messenger-head-in-chat").show();
+          $(".conversation").show();
+          $(".messages").show();
+          var scroll = $('.messages');
+          var height = scroll[0].scrollHeight;
+          scroll.scrollTop(height);
+        })
+        $(".back-btn").click(function(){
+          $(".messenger-head-in-chat").hide();
+          $(".conversation").hide();
+          $(".messenger-head-new").hide();
+          $(".messenger-head").show();
+          $(".messenger-body").show();
+          $(".messenger-footer").show();
+        })
+
+        $(".new-btn").click(function(){
+          $(".messenger-head").hide();
+          $(".messenger-body").hide();
+          $(".messenger-footer").hide();
+          $(".messenger-head-new").show();
+          $(".conversation").show();
+          $(".messages").hide();
+        })
+
+      })
     block footer
       footer.container-fluid#footer
         .col-md-2
@@ -103,3 +258,4 @@ html(lang='en')
         .col-md-4.bottom-align-text
           h6 School of Mechanical And Aerospace Engineering<br>Nanyang Technological University, Singapore
         .col-md-2
+
